@@ -1,24 +1,27 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- =========================================================
-         WEBSITE INFORMATION
-         Change these values if you want to edit the browser title
-         or search-engine description.
-    ========================================================== -->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <title>Uganda Printing & Publishing Museum | Preserving 120 Years of Print Heritage</title>
+    <title>
+        Uganda Printing & Publishing Museum | Preserving 120 Years of Print Heritage
+    </title>
 
     <meta
         name="description"
         content="Discover 120 years of Uganda's printing and publishing history — from the 1902 Government Printer to today's digital revolution."
     >
 
-    <!-- Google Fonts -->
+    <!-- =========================================================
+         GOOGLE FONTS
+    ========================================================== -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -27,44 +30,1728 @@
         rel="stylesheet"
     >
 
-    <!-- Main stylesheet -->
-    <link rel="stylesheet" href="style.css">
+
+    <!-- =========================================================
+         ALL CSS
+         Everything between <style> and </style> controls the
+         appearance of the website.
+    ========================================================== -->
+
+    <style>
+
+        /* ========================================================
+           EASY COLOUR SETTINGS
+
+           These are the main colours used throughout the site.
+           Change them here if you want to change the theme.
+        ======================================================== */
+
+        :root {
+
+            --black: #111111;
+            --black-soft: #181818;
+
+            --white: #ffffff;
+            --off-white: #f7f7f4;
+
+            --yellow: #f7d000;
+            --red: #d71920;
+
+            --text: #222222;
+            --muted: #6b6b6b;
+
+            --border: #dedede;
+
+            --max-width: 1200px;
+
+            --serif: "Playfair Display", Georgia, serif;
+
+            --sans: "Inter", Arial, sans-serif;
+
+            --mono: "JetBrains Mono", monospace;
+        }
+
+
+        /* ========================================================
+           RESET
+        ======================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: var(--sans);
+
+            color: var(--text);
+
+            background: var(--white);
+
+            line-height: 1.7;
+
+            overflow-x: hidden;
+        }
+
+
+        img {
+            max-width: 100%;
+
+            display: block;
+        }
+
+
+        a {
+            color: inherit;
+
+            text-decoration: none;
+        }
+
+
+        button {
+            font-family: inherit;
+        }
+
+
+        /* ========================================================
+           GENERAL
+        ======================================================== */
+
+        .container {
+
+            width: min(92%, var(--max-width));
+
+            margin: 0 auto;
+        }
+
+
+        .section {
+
+            padding: 110px 0;
+        }
+
+
+        .eyebrow {
+
+            font-family: var(--mono);
+
+            font-size: 0.75rem;
+
+            font-weight: 500;
+
+            letter-spacing: 0.16em;
+
+            text-transform: uppercase;
+
+            margin-bottom: 20px;
+
+            color: var(--red);
+        }
+
+
+        .section-heading {
+
+            max-width: 800px;
+
+            margin-bottom: 60px;
+        }
+
+
+        .section-heading h2 {
+
+            font-family: var(--serif);
+
+            font-size: clamp(2.3rem, 5vw, 4.5rem);
+
+            line-height: 1.08;
+
+            font-weight: 400;
+        }
+
+
+        .section-heading > p:last-child {
+
+            color: var(--muted);
+
+            margin-top: 20px;
+        }
+
+
+        .heading-line {
+
+            width: 70px;
+
+            height: 5px;
+
+            margin-top: 28px;
+
+            background:
+                linear-gradient(
+                    to right,
+                    var(--black) 0 33%,
+                    var(--yellow) 33% 66%,
+                    var(--red) 66% 100%
+                );
+        }
+
+
+        /* ========================================================
+           HEADER
+        ======================================================== */
+
+        .site-header {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            z-index: 1000;
+
+            background: rgba(17, 17, 17, 0.96);
+
+            border-bottom:
+                1px solid
+                rgba(255,255,255,0.08);
+
+            backdrop-filter: blur(12px);
+        }
+
+
+        .nav-container {
+
+            min-height: 82px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 30px;
+        }
+
+
+        .logo img {
+
+            width: 150px;
+
+            height: auto;
+        }
+
+
+        .main-nav {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 28px;
+        }
+
+
+        .main-nav a {
+
+            color: var(--white);
+
+            font-size: 0.82rem;
+
+            font-weight: 500;
+
+            transition: 0.25s ease;
+        }
+
+
+        .main-nav a:hover {
+
+            color: var(--yellow);
+        }
+
+
+        .mobile-menu-btn {
+
+            display: none;
+
+            background: transparent;
+
+            border: 0;
+
+            color: white;
+
+            font-size: 1.8rem;
+
+            cursor: pointer;
+        }
+
+
+        /* ========================================================
+           HERO
+        ======================================================== */
+
+        .hero {
+
+            min-height: 100vh;
+
+            position: relative;
+
+            display: flex;
+
+            align-items: center;
+
+            background-image:
+                url("images/3.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+        }
+
+
+        .hero-overlay {
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,0.88),
+                    rgba(0,0,0,0.60),
+                    rgba(0,0,0,0.30)
+                );
+        }
+
+
+        .hero-content {
+
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 900px;
+
+            padding-top: 90px;
+
+            color: var(--white);
+        }
+
+
+        .hero .eyebrow {
+
+            color: var(--yellow);
+        }
+
+
+        .hero h1 {
+
+            font-family: var(--serif);
+
+            font-size: clamp(3rem, 8vw, 7rem);
+
+            font-weight: 400;
+
+            line-height: 0.98;
+
+            margin-bottom: 30px;
+        }
+
+
+        .hero h1 span {
+
+            display: block;
+
+            color: var(--yellow);
+
+            font-style: italic;
+        }
+
+
+        .hero-description {
+
+            max-width: 680px;
+
+            font-size: 1.15rem;
+
+            color:
+                rgba(255,255,255,0.85);
+
+            margin-bottom: 40px;
+        }
+
+
+        .hero-buttons {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 14px;
+        }
+
+
+        /* ========================================================
+           BUTTONS
+        ======================================================== */
+
+        .btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 52px;
+
+            padding: 0 28px;
+
+            font-size: 0.82rem;
+
+            font-weight: 600;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.08em;
+
+            transition: 0.25s ease;
+        }
+
+
+        .btn-primary {
+
+            background: var(--yellow);
+
+            color: var(--black);
+        }
+
+
+        .btn-primary:hover {
+
+            background: var(--white);
+
+            transform: translateY(-2px);
+        }
+
+
+        .btn-outline {
+
+            border:
+                1px solid
+                rgba(255,255,255,0.7);
+
+            color: var(--white);
+        }
+
+
+        .btn-outline:hover {
+
+            background: var(--white);
+
+            color: var(--black);
+        }
+
+
+        /* ========================================================
+           INTRODUCTION
+        ======================================================== */
+
+        .intro {
+
+            background: var(--off-white);
+        }
+
+
+        .intro-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1fr)
+                minmax(0, 1fr);
+
+            gap: 80px;
+
+            align-items: center;
+        }
+
+
+        .intro-text {
+
+            max-width: 650px;
+        }
+
+
+        .intro-text .lead {
+
+            font-family: var(--serif);
+
+            font-size: 1.65rem;
+
+            line-height: 1.5;
+
+            margin-bottom: 30px;
+        }
+
+
+        .intro-text p {
+
+            margin-bottom: 20px;
+
+            color: #555;
+        }
+
+
+        .intro-image {
+
+            position: relative;
+        }
+
+
+        .intro-image img {
+
+            width: 100%;
+
+            height: 560px;
+
+            object-fit: cover;
+        }
+
+
+        .image-caption {
+
+            position: absolute;
+
+            bottom: 0;
+
+            left: 0;
+
+            right: 0;
+
+            padding: 20px;
+
+            background:
+                rgba(0,0,0,0.8);
+
+            color: white;
+
+            font-size: 0.85rem;
+        }
+
+
+        /* ========================================================
+           STATS
+        ======================================================== */
+
+        .stats-section {
+
+            background: var(--black);
+
+            color: white;
+
+            padding: 55px 0;
+        }
+
+
+        .stats-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 30px;
+        }
+
+
+        .stat {
+
+            text-align: center;
+
+            padding: 15px;
+
+            border-right:
+                1px solid
+                rgba(255,255,255,0.12);
+        }
+
+
+        .stat:last-child {
+
+            border-right: 0;
+        }
+
+
+        .stat strong {
+
+            display: block;
+
+            font-family: var(--serif);
+
+            font-size: 3.5rem;
+
+            color: var(--yellow);
+
+            line-height: 1;
+
+            margin-bottom: 10px;
+        }
+
+
+        .stat span {
+
+            color:
+                rgba(255,255,255,0.65);
+
+            font-size: 0.78rem;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.1em;
+        }
+
+
+        /* ========================================================
+           HISTORY
+        ======================================================== */
+
+        .history {
+
+            background: white;
+        }
+
+
+        .timeline {
+
+            max-width: 950px;
+
+            margin: 0 auto;
+
+            position: relative;
+        }
+
+
+        .timeline::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: 110px;
+
+            top: 0;
+
+            bottom: 0;
+
+            width: 2px;
+
+            background: var(--border);
+        }
+
+
+        .timeline-item {
+
+            display: grid;
+
+            grid-template-columns:
+                150px
+                1fr;
+
+            gap: 50px;
+
+            position: relative;
+
+            padding-bottom: 65px;
+        }
+
+
+        .timeline-item:last-child {
+
+            padding-bottom: 0;
+        }
+
+
+        .timeline-year {
+
+            font-family: var(--mono);
+
+            font-size: 1rem;
+
+            font-weight: 500;
+
+            color: var(--red);
+
+            text-align: right;
+        }
+
+
+        .timeline-content {
+
+            position: relative;
+        }
+
+
+        .timeline-content::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: -60px;
+
+            top: 4px;
+
+            width: 18px;
+
+            height: 18px;
+
+            border-radius: 50%;
+
+            background: var(--yellow);
+
+            border: 4px solid white;
+
+            box-shadow:
+                0 0 0 2px var(--black);
+        }
+
+
+        .timeline-content h3 {
+
+            font-family: var(--serif);
+
+            font-size: 2rem;
+
+            font-weight: 400;
+
+            margin-bottom: 12px;
+        }
+
+
+        .timeline-content p {
+
+            color: var(--muted);
+
+            max-width: 650px;
+        }
+
+
+        /* ========================================================
+           MUSEUM COLLECTION
+        ======================================================== */
+
+        .museum {
+
+            background: var(--off-white);
+        }
+
+
+        .collection-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .collection-card {
+
+            background: white;
+
+            padding: 40px 30px;
+
+            min-height: 300px;
+
+            border-top:
+                4px solid
+                var(--black);
+
+            transition: 0.3s ease;
+        }
+
+
+        .collection-card:hover {
+
+            transform: translateY(-7px);
+
+            border-top-color: var(--yellow);
+
+            box-shadow:
+                0 20px 40px
+                rgba(0,0,0,0.08);
+        }
+
+
+        .card-number {
+
+            font-family: var(--mono);
+
+            color: var(--red);
+
+            font-size: 0.8rem;
+
+            margin-bottom: 40px;
+        }
+
+
+        .collection-card h3 {
+
+            font-family: var(--serif);
+
+            font-size: 1.7rem;
+
+            font-weight: 400;
+
+            margin-bottom: 15px;
+        }
+
+
+        .collection-card p {
+
+            color: var(--muted);
+
+            font-size: 0.95rem;
+        }
+
+
+        /* ========================================================
+           FEATURE IMAGE
+        ======================================================== */
+
+        .feature-image {
+
+            position: relative;
+
+            height: 620px;
+
+            overflow: hidden;
+        }
+
+
+        .feature-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+
+        .feature-overlay {
+
+            position: absolute;
+
+            inset: 0;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            padding: 30px;
+
+            color: white;
+
+            background:
+                rgba(0,0,0,0.48);
+        }
+
+
+        .feature-overlay .eyebrow {
+
+            color: var(--yellow);
+        }
+
+
+        .feature-overlay h2 {
+
+            font-family: var(--serif);
+
+            font-size:
+                clamp(3rem, 7vw, 6rem);
+
+            font-weight: 400;
+
+            max-width: 900px;
+
+            line-height: 1;
+        }
+
+
+        /* ========================================================
+           GALLERY
+        ======================================================== */
+
+        .gallery {
+
+            background: white;
+        }
+
+
+        .gallery-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 10px;
+        }
+
+
+        .gallery-item {
+
+            aspect-ratio: 1 / 1;
+
+            overflow: hidden;
+
+            cursor: pointer;
+
+            background: #ddd;
+        }
+
+
+        .gallery-item img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition:
+                transform 0.5s ease;
+        }
+
+
+        .gallery-item:hover img {
+
+            transform: scale(1.08);
+        }
+
+
+        /* ========================================================
+           EXPERIENCE
+        ======================================================== */
+
+        .experience {
+
+            background: var(--black);
+
+            color: white;
+        }
+
+
+        .experience-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr
+                1fr;
+
+            gap: 100px;
+        }
+
+
+        .experience h2 {
+
+            font-family: var(--serif);
+
+            font-size:
+                clamp(2.5rem, 5vw, 5rem);
+
+            font-weight: 400;
+
+            line-height: 1;
+        }
+
+
+        .experience p {
+
+            color:
+                rgba(255,255,255,0.7);
+
+            margin-bottom: 20px;
+        }
+
+
+        .text-link {
+
+            display: inline-block;
+
+            color: var(--yellow);
+
+            font-weight: 600;
+
+            margin-top: 15px;
+        }
+
+
+        /* ========================================================
+           VISIT
+        ======================================================== */
+
+        .visit {
+
+            background: var(--off-white);
+        }
+
+
+        .visit-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .visit-card {
+
+            background: white;
+
+            padding: 40px;
+
+            border-top:
+                3px solid
+                var(--black);
+        }
+
+
+        .visit-icon {
+
+            font-size: 1.7rem;
+
+            display: block;
+
+            margin-bottom: 25px;
+        }
+
+
+        .visit-card h3 {
+
+            font-family: var(--serif);
+
+            font-size: 1.7rem;
+
+            font-weight: 400;
+
+            margin-bottom: 15px;
+        }
+
+
+        .visit-card p {
+
+            color: var(--muted);
+        }
+
+
+        .visit-cta {
+
+            margin-top: 60px;
+
+            padding: 60px;
+
+            background: var(--black);
+
+            color: white;
+
+            text-align: center;
+        }
+
+
+        .visit-cta h3 {
+
+            font-family: var(--serif);
+
+            font-size: 2.2rem;
+
+            font-weight: 400;
+
+            margin-bottom: 12px;
+        }
+
+
+        .visit-cta p {
+
+            color:
+                rgba(255,255,255,0.7);
+
+            margin-bottom: 25px;
+        }
+
+
+        /* ========================================================
+           CONTACT
+        ======================================================== */
+
+        .contact {
+
+            background: white;
+        }
+
+
+        .contact-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1.2fr
+                0.8fr;
+
+            gap: 100px;
+        }
+
+
+        .contact h2 {
+
+            font-family: var(--serif);
+
+            font-size:
+                clamp(2.5rem, 5vw, 5rem);
+
+            line-height: 1.05;
+
+            font-weight: 400;
+
+            margin-bottom: 30px;
+        }
+
+
+        .contact-grid > div:first-child p {
+
+            max-width: 650px;
+
+            color: var(--muted);
+
+            font-size: 1.05rem;
+        }
+
+
+        .contact-details {
+
+            border-top:
+                1px solid
+                var(--border);
+        }
+
+
+        .contact-details > div {
+
+            padding: 25px 0;
+
+            border-bottom:
+                1px solid
+                var(--border);
+        }
+
+
+        .contact-details span {
+
+            display: block;
+
+            font-family: var(--mono);
+
+            font-size: 0.7rem;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.1em;
+
+            color: var(--red);
+
+            margin-bottom: 8px;
+        }
+
+
+        .contact-details a {
+
+            font-size: 1.1rem;
+
+            font-weight: 500;
+        }
+
+
+        .contact-details p {
+
+            color: var(--muted);
+        }
+
+
+        /* ========================================================
+           FOOTER
+        ======================================================== */
+
+        .site-footer {
+
+            background: var(--black);
+
+            color: white;
+
+            padding-top: 70px;
+        }
+
+
+        .footer-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                2fr
+                1fr
+                1fr;
+
+            gap: 60px;
+
+            padding-bottom: 60px;
+        }
+
+
+        .footer-brand img {
+
+            width: 190px;
+
+            background: white;
+
+            padding: 10px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .footer-brand p {
+
+            max-width: 420px;
+
+            color:
+                rgba(255,255,255,0.55);
+
+            font-size: 0.9rem;
+
+            margin-bottom: 10px;
+        }
+
+
+        .footer-links {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 10px;
+        }
+
+
+        .footer-links h4 {
+
+            color: var(--yellow);
+
+            font-family: var(--mono);
+
+            font-size: 0.75rem;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.12em;
+
+            margin-bottom: 10px;
+        }
+
+
+        .footer-links a {
+
+            color:
+                rgba(255,255,255,0.7);
+
+            font-size: 0.9rem;
+
+            transition: 0.2s;
+        }
+
+
+        .footer-links a:hover {
+
+            color: white;
+        }
+
+
+        .footer-bottom {
+
+            border-top:
+                1px solid
+                rgba(255,255,255,0.1);
+
+            padding: 25px 0;
+        }
+
+
+        .footer-bottom p {
+
+            color:
+                rgba(255,255,255,0.4);
+
+            font-size: 0.75rem;
+        }
+
+
+        /* ========================================================
+           IMAGE LIGHTBOX
+        ======================================================== */
+
+        .lightbox {
+
+            position: fixed;
+
+            inset: 0;
+
+            z-index: 2000;
+
+            display: none;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 30px;
+
+            background:
+                rgba(0,0,0,0.94);
+        }
+
+
+        .lightbox.active {
+
+            display: flex;
+        }
+
+
+        .lightbox img {
+
+            max-width: 95vw;
+
+            max-height: 90vh;
+
+            object-fit: contain;
+        }
+
+
+        .lightbox-close {
+
+            position: absolute;
+
+            top: 20px;
+
+            right: 25px;
+
+            border: 0;
+
+            background: transparent;
+
+            color: white;
+
+            font-size: 3rem;
+
+            line-height: 1;
+
+            cursor: pointer;
+        }
+
+
+        /* ========================================================
+           RESPONSIVE DESIGN
+        ======================================================== */
+
+        @media (max-width: 1000px) {
+
+            .main-nav {
+
+                gap: 15px;
+            }
+
+
+            .collection-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .gallery-grid {
+
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+
+
+            .stats-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .stat:nth-child(2) {
+
+                border-right: 0;
+            }
+
+        }
+
+
+        @media (max-width: 768px) {
+
+            .section {
+
+                padding: 75px 0;
+            }
+
+
+            /* MOBILE NAV */
+
+            .mobile-menu-btn {
+
+                display: block;
+            }
+
+
+            .main-nav {
+
+                display: none;
+
+                position: absolute;
+
+                top: 82px;
+
+                left: 0;
+
+                right: 0;
+
+                padding: 20px;
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                background: var(--black);
+            }
+
+
+            .main-nav.active {
+
+                display: flex;
+            }
+
+
+            .main-nav a {
+
+                width: 100%;
+
+                padding: 12px 0;
+
+                border-bottom:
+                    1px solid
+                    rgba(255,255,255,0.08);
+            }
+
+
+            /* HERO */
+
+            .hero {
+
+                min-height: 800px;
+            }
+
+
+            .hero h1 {
+
+                font-size: 3.7rem;
+            }
+
+
+            /* INTRO */
+
+            .intro-grid {
+
+                grid-template-columns: 1fr;
+
+                gap: 40px;
+            }
+
+
+            .intro-image img {
+
+                height: 400px;
+            }
+
+
+            /* STATS */
+
+            .stats-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+            }
+
+
+            .stat {
+
+                border-right: 0;
+
+                border-bottom:
+                    1px solid
+                    rgba(255,255,255,0.12);
+            }
+
+
+            /* TIMELINE */
+
+            .timeline::before {
+
+                left: 10px;
+            }
+
+
+            .timeline-item {
+
+                grid-template-columns: 1fr;
+
+                gap: 12px;
+
+                padding-left: 40px;
+            }
+
+
+            .timeline-year {
+
+                text-align: left;
+            }
+
+
+            .timeline-content::before {
+
+                left: -39px;
+            }
+
+
+            /* COLLECTION */
+
+            .collection-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            /* GALLERY */
+
+            .gallery-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            /* EXPERIENCE */
+
+            .experience-grid {
+
+                grid-template-columns: 1fr;
+
+                gap: 40px;
+            }
+
+
+            /* VISIT */
+
+            .visit-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .visit-cta {
+
+                padding: 40px 20px;
+            }
+
+
+            /* CONTACT */
+
+            .contact-grid {
+
+                grid-template-columns: 1fr;
+
+                gap: 50px;
+            }
+
+
+            /* FOOTER */
+
+            .footer-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 480px) {
+
+            .logo img {
+
+                width: 125px;
+            }
+
+
+            .hero h1 {
+
+                font-size: 3rem;
+            }
+
+
+            .hero-description {
+
+                font-size: 1rem;
+            }
+
+
+            .hero-buttons {
+
+                flex-direction: column;
+            }
+
+
+            .btn {
+
+                width: 100%;
+            }
+
+
+            .stats-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .gallery-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .feature-image {
+
+                height: 500px;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
+
 <!-- =============================================================
-     NAVIGATION
-     ============================================================= -->
+     HEADER / NAVIGATION
+============================================================= -->
 
 <header class="site-header" id="top">
 
     <div class="container nav-container">
 
-        <!-- LOGO
-             Replace images/logo.png if you want another logo. -->
+
+        <!--
+            LOGO
+
+            Put your UPPC logo in:
+
+            images/logo.png
+
+            If your logo has a different filename,
+            change it here.
+        -->
 
         <a href="#home" class="logo">
-            <img src="images/logo.png" alt="Uganda Printing and Publishing Corporation">
+
+            <img
+                src="images/logo.png"
+                alt="Uganda Printing and Publishing Corporation"
+            >
+
         </a>
+
+
+        <!-- Mobile menu -->
 
         <button
             class="mobile-menu-btn"
             id="mobileMenuBtn"
             aria-label="Open navigation menu"
         >
+
             ☰
+
         </button>
 
-        <nav class="main-nav" id="mainNav">
 
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#history">History</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#museum">Museum</a>
-            <a href="#visit">Visit</a>
-            <a href="#contact">Contact</a>
+        <!-- Navigation -->
+
+        <nav
+            class="main-nav"
+            id="mainNav"
+        >
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#history">
+                History
+            </a>
+
+            <a href="#gallery">
+                Gallery
+            </a>
+
+            <a href="#museum">
+                Museum
+            </a>
+
+            <a href="#visit">
+                Visit
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
 
         </nav>
 
@@ -74,43 +1761,76 @@
 
 
 <!-- =============================================================
-     HERO
-     ============================================================= -->
+     MAIN CONTENT
+============================================================= -->
 
 <main>
 
-<section class="hero" id="home">
+
+<!-- =============================================================
+     HERO
+============================================================= -->
+
+<section
+    class="hero"
+    id="home"
+>
 
     <div class="hero-overlay"></div>
 
+
     <div class="container hero-content">
 
-        <!-- EDIT THIS TITLE -->
+
         <p class="eyebrow">
             UGANDA PRINTING &amp; PUBLISHING MUSEUM
         </p>
 
-        <!-- EDIT THIS HEADING -->
+
+        <!--
+            MAIN WEBSITE HEADING
+
+            EDIT THIS TEXT HERE.
+        -->
+
         <h1>
+
             Preserving
-            <span>120 Years</span>
+
+            <span>
+                120 Years
+            </span>
+
             of Print Heritage
+
         </h1>
 
-        <!-- EDIT THIS DESCRIPTION -->
+
+        <!-- EDIT DESCRIPTION -->
+
         <p class="hero-description">
+
             Discover the story of Uganda's printing and publishing journey —
             from the Government Printer established in 1902 to today's
             digital revolution.
+
         </p>
+
 
         <div class="hero-buttons">
 
-            <a href="#history" class="btn btn-primary">
+            <a
+                href="#history"
+                class="btn btn-primary"
+            >
                 Explore Our History
             </a>
 
-            <a href="#gallery" class="btn btn-outline">
+
+            <a
+                href="#gallery"
+                class="btn btn-outline"
+            >
                 View Gallery
             </a>
 
@@ -122,12 +1842,16 @@
 
 
 <!-- =============================================================
-     INTRODUCTION
-     ============================================================= -->
+     ABOUT
+============================================================= -->
 
-<section class="intro section" id="about">
+<section
+    class="intro section"
+    id="about"
+>
 
     <div class="container">
+
 
         <div class="section-heading">
 
@@ -135,9 +1859,11 @@
                 OUR HERITAGE
             </p>
 
+
             <h2>
                 Where Uganda's printed history comes alive
             </h2>
+
 
             <div class="heading-line"></div>
 
@@ -146,27 +1872,35 @@
 
         <div class="intro-grid">
 
+
             <div class="intro-text">
 
-                <!-- EDIT THIS TEXT -->
 
                 <p class="lead">
+
                     The Uganda Printing &amp; Publishing Museum celebrates
                     more than a century of printing, publishing, journalism,
                     design and information preservation in Uganda.
+
                 </p>
 
+
                 <p>
+
                     From early government publications and newspapers to
                     modern digital production, printing has played a major
                     role in documenting Uganda's political, social, cultural
                     and economic development.
+
                 </p>
 
+
                 <p>
+
                     The museum provides a space where visitors can explore
                     historic printing equipment, publications, photographs,
                     documents and the people behind Uganda's print heritage.
+
                 </p>
 
             </div>
@@ -174,14 +1908,19 @@
 
             <div class="intro-image">
 
-                <!-- CHANGE IMAGE HERE -->
+                <!-- CHANGE THIS IMAGE TO ANY IMAGE YOU WANT -->
+
                 <img
                     src="images/1.jpg"
                     alt="Historic printing heritage in Uganda"
                 >
 
+
                 <div class="image-caption">
-                    Preserving Uganda's print heritage for future generations.
+
+                    Preserving Uganda's print heritage
+                    for future generations.
+
                 </div>
 
             </div>
@@ -195,30 +1934,62 @@
 
 <!-- =============================================================
      STATISTICS
-     ============================================================= -->
+============================================================= -->
 
 <section class="stats-section">
 
     <div class="container stats-grid">
 
-        <div class="stat">
-            <strong>120+</strong>
-            <span>Years of Heritage</span>
-        </div>
 
         <div class="stat">
-            <strong>1902</strong>
-            <span>Government Printer Era</span>
+
+            <strong>
+                120+
+            </strong>
+
+            <span>
+                Years of Heritage
+            </span>
+
         </div>
 
-        <div class="stat">
-            <strong>1</strong>
-            <span>Print Heritage Museum</span>
-        </div>
 
         <div class="stat">
-            <strong>100+</strong>
-            <span>Years of Publications</span>
+
+            <strong>
+                1902
+            </strong>
+
+            <span>
+                Government Printer Era
+            </span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <strong>
+                1
+            </strong>
+
+            <span>
+                Print Heritage Museum
+            </span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <strong>
+                100+
+            </strong>
+
+            <span>
+                Years of Publications
+            </span>
+
         </div>
 
     </div>
@@ -227,12 +1998,16 @@
 
 
 <!-- =============================================================
-     HISTORY
-     ============================================================= -->
+     HISTORY TIMELINE
+============================================================= -->
 
-<section class="history section" id="history">
+<section
+    class="history section"
+    id="history"
+>
 
     <div class="container">
+
 
         <div class="section-heading">
 
@@ -240,9 +2015,11 @@
                 OUR TIMELINE
             </p>
 
+
             <h2>
                 A Century of Printing in Uganda
             </h2>
+
 
             <div class="heading-line"></div>
 
@@ -260,16 +2037,20 @@
                     1902
                 </div>
 
+
                 <div class="timeline-content">
 
                     <h3>
                         The Government Printer
                     </h3>
 
+
                     <p>
+
                         Uganda's printing history reaches a major milestone
                         with the establishment of the Government Printer
                         during the colonial period.
+
                     </p>
 
                 </div>
@@ -285,16 +2066,20 @@
                     1962
                 </div>
 
+
                 <div class="timeline-content">
 
                     <h3>
                         Independence Era
                     </h3>
 
+
                     <p>
+
                         Following independence, government printing continued
                         to support the production of official documents,
                         publications and national information.
+
                     </p>
 
                 </div>
@@ -310,15 +2095,19 @@
                     1992
                 </div>
 
+
                 <div class="timeline-content">
 
                     <h3>
                         Uganda Printing &amp; Publishing Corporation
                     </h3>
 
+
                     <p>
+
                         The Uganda Printing and Publishing Corporation was
                         established as a public enterprise under the UPPC Act.
+
                     </p>
 
                 </div>
@@ -334,16 +2123,20 @@
                     2000s
                 </div>
 
+
                 <div class="timeline-content">
 
                     <h3>
                         Digital Transformation
                     </h3>
 
+
                     <p>
+
                         Printing and publishing increasingly adopted digital
                         workflows, modern production systems and electronic
                         publishing technologies.
+
                     </p>
 
                 </div>
@@ -359,15 +2152,19 @@
                     TODAY
                 </div>
 
+
                 <div class="timeline-content">
 
                     <h3>
                         Preserving the Future
                     </h3>
 
+
                     <p>
+
                         The museum brings together Uganda's printing heritage
                         and the technologies shaping the future of publishing.
+
                     </p>
 
                 </div>
@@ -384,11 +2181,15 @@
 
 <!-- =============================================================
      MUSEUM COLLECTION
-     ============================================================= -->
+============================================================= -->
 
-<section class="museum section" id="museum">
+<section
+    class="museum section"
+    id="museum"
+>
 
     <div class="container">
+
 
         <div class="section-heading">
 
@@ -396,9 +2197,11 @@
                 THE COLLECTION
             </p>
 
+
             <h2>
                 What You Will Discover
             </h2>
+
 
             <div class="heading-line"></div>
 
@@ -414,13 +2217,17 @@
                     01
                 </div>
 
+
                 <h3>
                     Historic Printing Machines
                 </h3>
 
+
                 <p>
+
                     Explore the machinery and equipment that helped shape
                     Uganda's printing industry.
+
                 </p>
 
             </article>
@@ -432,13 +2239,17 @@
                     02
                 </div>
 
+
                 <h3>
                     Historic Publications
                 </h3>
 
+
                 <p>
+
                     Discover newspapers, gazettes, books, government documents
                     and other important printed materials.
+
                 </p>
 
             </article>
@@ -450,13 +2261,17 @@
                     03
                 </div>
 
+
                 <h3>
                     Printing Technology
                 </h3>
 
+
                 <p>
+
                     Follow the evolution from traditional printing methods
                     to modern digital production.
+
                 </p>
 
             </article>
@@ -468,13 +2283,17 @@
                     04
                 </div>
 
+
                 <h3>
                     People &amp; Stories
                 </h3>
 
+
                 <p>
+
                     Learn about the printers, publishers, journalists,
                     designers and craftsmen who built Uganda's print culture.
+
                 </p>
 
             </article>
@@ -488,21 +2307,26 @@
 
 
 <!-- =============================================================
-     FEATURED IMAGE
-     ============================================================= -->
+     FEATURE IMAGE
+============================================================= -->
 
 <section class="feature-image">
+
+
+    <!-- CHANGE THIS IMAGE -->
 
     <img
         src="images/2.jpg"
         alt="Uganda printing heritage"
     >
 
+
     <div class="feature-overlay">
 
         <p class="eyebrow">
             PRESERVING MEMORY
         </p>
+
 
         <h2>
             Every page tells a story.
@@ -515,11 +2339,15 @@
 
 <!-- =============================================================
      GALLERY
-     ============================================================= -->
+============================================================= -->
 
-<section class="gallery section" id="gallery">
+<section
+    class="gallery section"
+    id="gallery"
+>
 
     <div class="container">
+
 
         <div class="section-heading">
 
@@ -527,100 +2355,221 @@
                 VISUAL ARCHIVE
             </p>
 
+
             <h2>
                 Museum Gallery
             </h2>
 
+
             <div class="heading-line"></div>
 
+
             <p>
+
                 A selection from the museum's visual collection.
+
             </p>
 
         </div>
 
 
         <!--
-            IMAGE GALLERY
+            =====================================================
+            YOUR 18 IMAGES
 
-            Your images are numbered 1.jpg through 18.jpg.
+            The files should be:
 
-            To change an image, simply replace the filename.
+            images/1.jpg
+            images/2.jpg
+            images/3.jpg
+            ...
+            images/18.jpg
+
+            To change an image, simply change the filename.
+            =====================================================
         -->
+
 
         <div class="gallery-grid">
 
 
             <figure class="gallery-item">
-                <img src="images/1.jpg" alt="Museum image 1">
+
+                <img
+                    src="images/1.jpg"
+                    alt="Museum image 1"
+                >
+
             </figure>
 
-            <figure class="gallery-item">
-                <img src="images/2.jpg" alt="Museum image 2">
-            </figure>
 
             <figure class="gallery-item">
-                <img src="images/3.jpg" alt="Museum image 3">
+
+                <img
+                    src="images/2.jpg"
+                    alt="Museum image 2"
+                >
+
             </figure>
 
-            <figure class="gallery-item">
-                <img src="images/4.jpg" alt="Museum image 4">
-            </figure>
 
             <figure class="gallery-item">
-                <img src="images/5.jpg" alt="Museum image 5">
+
+                <img
+                    src="images/3.jpg"
+                    alt="Museum image 3"
+                >
+
             </figure>
 
-            <figure class="gallery-item">
-                <img src="images/6.jpg" alt="Museum image 6">
-            </figure>
 
             <figure class="gallery-item">
-                <img src="images/7.jpg" alt="Museum image 7">
+
+                <img
+                    src="images/4.jpg"
+                    alt="Museum image 4"
+                >
+
             </figure>
 
-            <figure class="gallery-item">
-                <img src="images/8.jpg" alt="Museum image 8">
-            </figure>
 
             <figure class="gallery-item">
-                <img src="images/9.jpg" alt="Museum image 9">
+
+                <img
+                    src="images/5.jpg"
+                    alt="Museum image 5"
+                >
+
             </figure>
 
-            <figure class="gallery-item">
-                <img src="images/10.jpg" alt="Museum image 10">
-            </figure>
 
             <figure class="gallery-item">
-                <img src="images/11.jpg" alt="Museum image 11">
+
+                <img
+                    src="images/6.jpg"
+                    alt="Museum image 6"
+                >
+
             </figure>
 
-            <figure class="gallery-item">
-                <img src="images/12.jpg" alt="Museum image 12">
-            </figure>
 
             <figure class="gallery-item">
-                <img src="images/13.jpg" alt="Museum image 13">
+
+                <img
+                    src="images/7.jpg"
+                    alt="Museum image 7"
+                >
+
             </figure>
 
-            <figure class="gallery-item">
-                <img src="images/14.jpg" alt="Museum image 14">
-            </figure>
 
             <figure class="gallery-item">
-                <img src="images/15.jpg" alt="Museum image 15">
+
+                <img
+                    src="images/8.jpg"
+                    alt="Museum image 8"
+                >
+
             </figure>
 
-            <figure class="gallery-item">
-                <img src="images/16.jpg" alt="Museum image 16">
-            </figure>
 
             <figure class="gallery-item">
-                <img src="images/17.jpg" alt="Museum image 17">
+
+                <img
+                    src="images/9.jpg"
+                    alt="Museum image 9"
+                >
+
             </figure>
 
+
             <figure class="gallery-item">
-                <img src="images/18.jpg" alt="Museum image 18">
+
+                <img
+                    src="images/10.jpg"
+                    alt="Museum image 10"
+                >
+
+            </figure>
+
+
+            <figure class="gallery-item">
+
+                <img
+                    src="images/11.jpg"
+                    alt="Museum image 11"
+                >
+
+            </figure>
+
+
+            <figure class="gallery-item">
+
+                <img
+                    src="images/12.jpg"
+                    alt="Museum image 12"
+                >
+
+            </figure>
+
+
+            <figure class="gallery-item">
+
+                <img
+                    src="images/13.jpg"
+                    alt="Museum image 13"
+                >
+
+            </figure>
+
+
+            <figure class="gallery-item">
+
+                <img
+                    src="images/14.jpg"
+                    alt="Museum image 14"
+                >
+
+            </figure>
+
+
+            <figure class="gallery-item">
+
+                <img
+                    src="images/15.jpg"
+                    alt="Museum image 15"
+                >
+
+            </figure>
+
+
+            <figure class="gallery-item">
+
+                <img
+                    src="images/16.jpg"
+                    alt="Museum image 16"
+                >
+
+            </figure>
+
+
+            <figure class="gallery-item">
+
+                <img
+                    src="images/17.jpg"
+                    alt="Museum image 17"
+                >
+
+            </figure>
+
+
+            <figure class="gallery-item">
+
+                <img
+                    src="images/18.jpg"
+                    alt="Museum image 18"
+                >
+
             </figure>
 
 
@@ -632,18 +2581,20 @@
 
 
 <!-- =============================================================
-     MUSEUM EXPERIENCE
-     ============================================================= -->
+     EXPERIENCE
+============================================================= -->
 
 <section class="experience section">
 
     <div class="container experience-grid">
+
 
         <div>
 
             <p class="eyebrow">
                 THE EXPERIENCE
             </p>
+
 
             <h2>
                 More than a museum.
@@ -655,18 +2606,29 @@
         <div>
 
             <p>
+
                 The Uganda Printing &amp; Publishing Museum is designed to
                 connect generations through the history of print.
+
             </p>
 
+
             <p>
+
                 Visitors can explore the tools, technologies, publications
                 and stories that demonstrate how information has been
                 produced, preserved and shared across Uganda.
+
             </p>
 
-            <a href="#visit" class="text-link">
+
+            <a
+                href="#visit"
+                class="text-link"
+            >
+
                 Plan Your Visit →
+
             </a>
 
         </div>
@@ -678,11 +2640,15 @@
 
 <!-- =============================================================
      VISIT
-     ============================================================= -->
+============================================================= -->
 
-<section class="visit section" id="visit">
+<section
+    class="visit section"
+    id="visit"
+>
 
     <div class="container">
+
 
         <div class="section-heading">
 
@@ -690,9 +2656,14 @@
                 PLAN YOUR VISIT
             </p>
 
+
             <h2>
-                Come and experience Uganda's print heritage.
+
+                Come and experience
+                Uganda's print heritage.
+
             </h2>
+
 
             <div class="heading-line"></div>
 
@@ -708,16 +2679,24 @@
                     📍
                 </span>
 
+
                 <h3>
                     Location
                 </h3>
 
-                <!-- EDIT LOCATION -->
+
+                <!--
+                    EDIT YOUR LOCATION HERE
+                -->
 
                 <p>
+
                     Uganda Printing and Publishing Corporation
+
                     <br>
+
                     Entebbe, Uganda
+
                 </p>
 
             </div>
@@ -729,16 +2708,24 @@
                     🕐
                 </span>
 
+
                 <h3>
                     Opening Hours
                 </h3>
 
-                <!-- EDIT OPENING HOURS -->
+
+                <!--
+                    EDIT OPENING HOURS HERE
+                -->
 
                 <p>
+
                     Monday – Friday
+
                     <br>
+
                     9:00 AM – 5:00 PM
+
                 </p>
 
             </div>
@@ -750,16 +2737,24 @@
                     ✉
                 </span>
 
+
                 <h3>
                     Contact
                 </h3>
 
-                <!-- EDIT EMAIL -->
+
+                <!--
+                    EDIT EMAIL AND PHONE HERE
+                -->
 
                 <p>
+
                     info@uppc.go.ug
+
                     <br>
+
                     +256 32 652 0250
+
                 </p>
 
             </div>
@@ -770,21 +2765,30 @@
 
         <div class="visit-cta">
 
+
             <h3>
-                Planning a school, university or group visit?
+
+                Planning a school, university
+                or group visit?
+
             </h3>
 
+
             <p>
-                Contact us to arrange a guided museum experience.
+
+                Contact us to arrange a guided
+                museum experience.
+
             </p>
 
-            <!-- EDIT EMAIL LINK -->
 
             <a
                 href="mailto:info@uppc.go.ug"
                 class="btn btn-primary"
             >
+
                 Contact the Museum
+
             </a>
 
         </div>
@@ -796,9 +2800,12 @@
 
 <!-- =============================================================
      CONTACT
-     ============================================================= -->
+============================================================= -->
 
-<section class="contact section" id="contact">
+<section
+    class="contact section"
+    id="contact"
+>
 
     <div class="container contact-grid">
 
@@ -809,14 +2816,21 @@
                 GET IN TOUCH
             </p>
 
+
             <h2>
-                Help preserve Uganda's print heritage.
+
+                Help preserve
+                Uganda's print heritage.
+
             </h2>
 
+
             <p>
+
                 Whether you are a researcher, student, historian,
                 institution, publisher or member of the public,
                 we welcome your interest in Uganda's printing history.
+
             </p>
 
         </div>
@@ -824,27 +2838,55 @@
 
         <div class="contact-details">
 
+
             <div>
-                <span>Email</span>
+
+                <span>
+                    Email
+                </span>
+
+
                 <a href="mailto:info@uppc.go.ug">
+
                     info@uppc.go.ug
+
                 </a>
+
             </div>
 
+
             <div>
-                <span>Phone</span>
+
+                <span>
+                    Phone
+                </span>
+
+
                 <a href="tel:+256326520250">
+
                     +256 32 652 0250
+
                 </a>
+
             </div>
 
+
             <div>
-                <span>Head Office</span>
+
+                <span>
+                    Head Office
+                </span>
+
+
                 <p>
+
                     Plot 8–12 Airport Road,
                     Entebbe, Uganda
+
                 </p>
+
             </div>
+
 
         </div>
 
@@ -852,72 +2894,110 @@
 
 </section>
 
+
 </main>
 
 
 <!-- =============================================================
      FOOTER
-     ============================================================= -->
+============================================================= -->
 
 <footer class="site-footer">
+
 
     <div class="container footer-grid">
 
 
         <div class="footer-brand">
 
+
+            <!-- LOGO -->
+
             <img
                 src="images/logo.png"
                 alt="UPPC Logo"
             >
 
-            <p>
-                Uganda Printing &amp; Publishing Museum
-            </p>
 
             <p>
+
+                Uganda Printing &amp; Publishing Museum
+
+            </p>
+
+
+            <p>
+
                 Preserving Uganda's printing and publishing heritage
                 for future generations.
+
             </p>
 
         </div>
 
 
         <div class="footer-links">
+
 
             <h4>
                 Explore
             </h4>
 
-            <a href="#about">About</a>
-            <a href="#history">History</a>
-            <a href="#museum">Museum</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#visit">Visit</a>
+
+            <a href="#about">
+                About
+            </a>
+
+
+            <a href="#history">
+                History
+            </a>
+
+
+            <a href="#museum">
+                Museum
+            </a>
+
+
+            <a href="#gallery">
+                Gallery
+            </a>
+
+
+            <a href="#visit">
+                Visit
+            </a>
 
         </div>
 
 
         <div class="footer-links">
 
+
             <h4>
                 UPPC
             </h4>
+
 
             <a
                 href="https://www.uppc.go.ug/"
                 target="_blank"
                 rel="noopener"
             >
+
                 Official UPPC Website
+
             </a>
+
 
             <a
                 href="https://www.uppc.go.ug/about-uppc"
                 target="_blank"
                 rel="noopener"
             >
+
                 About UPPC
+
             </a>
 
         </div>
@@ -928,12 +3008,19 @@
 
     <div class="footer-bottom">
 
+
         <div class="container">
 
             <p>
-                © <span id="year"></span>
+
+                ©
+
+                <span id="year"></span>
+
                 Uganda Printing &amp; Publishing Museum.
+
                 All Rights Reserved.
+
             </p>
 
         </div>
@@ -945,8 +3032,7 @@
 
 <!-- =============================================================
      IMAGE LIGHTBOX
-     Clicking a gallery image opens it larger.
-     ============================================================= -->
+============================================================= -->
 
 <div
     class="lightbox"
@@ -954,13 +3040,17 @@
     aria-hidden="true"
 >
 
+
     <button
         class="lightbox-close"
         id="lightboxClose"
         aria-label="Close image"
     >
+
         ×
+
     </button>
+
 
     <img
         id="lightboxImage"
@@ -971,1577 +3061,248 @@
 </div>
 
 
-<!-- JavaScript -->
-<script src="script.js"></script>
+<!-- =============================================================
+     ALL JAVASCRIPT
+     
+     Everything below is JavaScript.
+     This is the END of the single HTML file.
+============================================================= -->
 
-</body>
-</html>
-```
-
-## `style.css`
-
-```css
-/* ================================================================
-   UGANDA PRINTING & PUBLISHING MUSEUM
-   MAIN STYLESHEET
-
-   EASY EDIT AREA
-   ---------------------------------------------------------------
-   Most of the site's colours are controlled here.
-
-   UPPC-inspired colours:
-   Black  = #111111
-   Yellow = #F7D000
-   Red    = #D71920
-   White  = #FFFFFF
-
-   Change these variables if you want to adjust the theme.
-================================================================ */
-
-:root {
-
-    --black: #111111;
-    --black-soft: #181818;
-
-    --white: #ffffff;
-    --off-white: #f7f7f4;
-
-    --yellow: #f7d000;
-    --red: #d71920;
-
-    --text: #222222;
-    --muted: #6b6b6b;
-
-    --border: #dedede;
-
-    --max-width: 1200px;
-
-    --serif: "Playfair Display", Georgia, serif;
-    --sans: "Inter", Arial, sans-serif;
-    --mono: "JetBrains Mono", monospace;
-
-}
+<script>
 
 
-/* ================================================================
-   RESET
-================================================================ */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    /* ============================================================
+       MOBILE NAVIGATION
+    ============================================================ */
 
 
-html {
-    scroll-behavior: smooth;
-}
+    const mobileMenuBtn =
+        document.getElementById("mobileMenuBtn");
 
 
-body {
-    font-family: var(--sans);
-    color: var(--text);
-    background: var(--white);
-    line-height: 1.7;
-}
+    const mainNav =
+        document.getElementById("mainNav");
 
 
-img {
-    max-width: 100%;
-    display: block;
-}
+    if (
+        mobileMenuBtn &&
+        mainNav
+    ) {
 
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
+        mobileMenuBtn.addEventListener(
+            "click",
+            () => {
 
+                mainNav.classList.toggle("active");
 
-button {
-    font-family: inherit;
-}
-
-
-/* ================================================================
-   GENERAL
-================================================================ */
-
-.container {
-    width: min(92%, var(--max-width));
-    margin: 0 auto;
-}
-
-
-.section {
-    padding: 110px 0;
-}
-
-
-.eyebrow {
-    font-family: var(--mono);
-    font-size: 0.75rem;
-    font-weight: 500;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    color: var(--red);
-}
-
-
-.section-heading {
-    max-width: 800px;
-    margin-bottom: 60px;
-}
-
-
-.section-heading h2 {
-    font-family: var(--serif);
-    font-size: clamp(2.3rem, 5vw, 4.5rem);
-    line-height: 1.08;
-    font-weight: 400;
-}
-
-
-.heading-line {
-    width: 70px;
-    height: 5px;
-    margin-top: 28px;
-
-    background:
-        linear-gradient(
-            to right,
-            var(--black) 0 33%,
-            var(--yellow) 33% 66%,
-            var(--red) 66% 100%
+            }
         );
-}
 
 
-/* ================================================================
-   HEADER
-================================================================ */
-
-.site-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-
-    background: rgba(17, 17, 17, 0.96);
-
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-
-    backdrop-filter: blur(12px);
-}
+        const navLinks =
+            mainNav.querySelectorAll("a");
 
 
-.nav-container {
-    min-height: 82px;
+        navLinks.forEach(
+            link => {
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-}
+                link.addEventListener(
+                    "click",
+                    () => {
 
+                        mainNav.classList.remove(
+                            "active"
+                        );
 
-/* LOGO */
+                    }
+                );
 
-.logo img {
-    width: 150px;
-    height: auto;
-}
-
-
-/* NAVIGATION */
-
-.main-nav {
-    display: flex;
-    align-items: center;
-    gap: 28px;
-}
-
-
-.main-nav a {
-    color: var(--white);
-
-    font-size: 0.82rem;
-    font-weight: 500;
-
-    transition: 0.25s ease;
-}
-
-
-.main-nav a:hover {
-    color: var(--yellow);
-}
-
-
-/* MOBILE MENU BUTTON */
-
-.mobile-menu-btn {
-    display: none;
-
-    background: transparent;
-    border: 0;
-
-    color: white;
-
-    font-size: 1.8rem;
-
-    cursor: pointer;
-}
-
-
-/* ================================================================
-   HERO
-================================================================ */
-
-.hero {
-    min-height: 100vh;
-
-    position: relative;
-
-    display: flex;
-    align-items: center;
-
-    background-image: url("images/3.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(0,0,0,0.88),
-            rgba(0,0,0,0.60),
-            rgba(0,0,0,0.30)
+            }
         );
-}
 
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-
-    max-width: 900px;
-
-    padding-top: 90px;
-
-    color: var(--white);
-}
-
-
-.hero .eyebrow {
-    color: var(--yellow);
-}
-
-
-.hero h1 {
-    font-family: var(--serif);
-
-    font-size: clamp(3rem, 8vw, 7rem);
-
-    font-weight: 400;
-
-    line-height: 0.98;
-
-    margin-bottom: 30px;
-}
-
-
-.hero h1 span {
-    display: block;
-
-    color: var(--yellow);
-
-    font-style: italic;
-}
-
-
-.hero-description {
-    max-width: 680px;
-
-    font-size: 1.15rem;
-
-    color: rgba(255,255,255,0.85);
-
-    margin-bottom: 40px;
-}
-
-
-.hero-buttons {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 14px;
-}
-
-
-/* ================================================================
-   BUTTONS
-================================================================ */
-
-.btn {
-    display: inline-flex;
-
-    align-items: center;
-    justify-content: center;
-
-    min-height: 52px;
-
-    padding: 0 28px;
-
-    font-size: 0.82rem;
-
-    font-weight: 600;
-
-    text-transform: uppercase;
-
-    letter-spacing: 0.08em;
-
-    transition: 0.25s ease;
-}
-
-
-.btn-primary {
-    background: var(--yellow);
-
-    color: var(--black);
-}
-
-
-.btn-primary:hover {
-    background: var(--white);
-
-    transform: translateY(-2px);
-}
-
-
-.btn-outline {
-    border: 1px solid rgba(255,255,255,0.7);
-
-    color: var(--white);
-}
-
-
-.btn-outline:hover {
-    background: var(--white);
-
-    color: var(--black);
-}
-
-
-/* ================================================================
-   INTRO
-================================================================ */
-
-.intro {
-    background: var(--off-white);
-}
-
-
-.intro-grid {
-    display: grid;
-
-    grid-template-columns:
-        minmax(0, 1fr)
-        minmax(0, 1fr);
-
-    gap: 80px;
-
-    align-items: center;
-}
-
-
-.intro-text {
-    max-width: 650px;
-}
-
-
-.intro-text .lead {
-    font-family: var(--serif);
-
-    font-size: 1.65rem;
-
-    line-height: 1.5;
-
-    margin-bottom: 30px;
-}
-
-
-.intro-text p {
-    margin-bottom: 20px;
-
-    color: #555;
-}
-
-
-.intro-image {
-    position: relative;
-}
-
-
-.intro-image img {
-    width: 100%;
-
-    height: 560px;
-
-    object-fit: cover;
-}
-
-
-.image-caption {
-    position: absolute;
-
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-    padding: 20px;
-
-    background: rgba(0,0,0,0.8);
-
-    color: white;
-
-    font-size: 0.85rem;
-}
-
-
-/* ================================================================
-   STATS
-================================================================ */
-
-.stats-section {
-    background: var(--black);
-
-    color: white;
-
-    padding: 55px 0;
-}
-
-
-.stats-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
-    gap: 30px;
-}
-
-
-.stat {
-    text-align: center;
-
-    padding: 15px;
-
-    border-right:
-        1px solid
-        rgba(255,255,255,0.12);
-}
-
-
-.stat:last-child {
-    border-right: 0;
-}
-
-
-.stat strong {
-    display: block;
-
-    font-family: var(--serif);
-
-    font-size: 3.5rem;
-
-    color: var(--yellow);
-
-    line-height: 1;
-
-    margin-bottom: 10px;
-}
-
-
-.stat span {
-    color: rgba(255,255,255,0.65);
-
-    font-size: 0.78rem;
-
-    text-transform: uppercase;
-
-    letter-spacing: 0.1em;
-}
-
-
-/* ================================================================
-   HISTORY TIMELINE
-================================================================ */
-
-.history {
-    background: white;
-}
-
-
-.timeline {
-    max-width: 950px;
-
-    margin: 0 auto;
-
-    position: relative;
-}
-
-
-.timeline::before {
-    content: "";
-
-    position: absolute;
-
-    left: 110px;
-
-    top: 0;
-    bottom: 0;
-
-    width: 2px;
-
-    background: var(--border);
-}
-
-
-.timeline-item {
-    display: grid;
-
-    grid-template-columns:
-        150px
-        1fr;
-
-    gap: 50px;
-
-    position: relative;
-
-    padding-bottom: 65px;
-}
-
-
-.timeline-item:last-child {
-    padding-bottom: 0;
-}
-
-
-.timeline-year {
-    font-family: var(--mono);
-
-    font-size: 1rem;
-
-    font-weight: 500;
-
-    color: var(--red);
-
-    text-align: right;
-}
-
-
-.timeline-content {
-    position: relative;
-}
-
-
-.timeline-content::before {
-    content: "";
-
-    position: absolute;
-
-    left: -60px;
-
-    top: 4px;
-
-    width: 18px;
-    height: 18px;
-
-    border-radius: 50%;
-
-    background: var(--yellow);
-
-    border: 4px solid white;
-
-    box-shadow:
-        0 0 0 2px var(--black);
-}
-
-
-.timeline-content h3 {
-    font-family: var(--serif);
-
-    font-size: 2rem;
-
-    font-weight: 400;
-
-    margin-bottom: 12px;
-}
-
-
-.timeline-content p {
-    color: var(--muted);
-
-    max-width: 650px;
-}
-
-
-/* ================================================================
-   COLLECTION
-================================================================ */
-
-.museum {
-    background: var(--off-white);
-}
-
-
-.collection-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
-    gap: 20px;
-}
-
-
-.collection-card {
-    background: white;
-
-    padding: 40px 30px;
-
-    min-height: 300px;
-
-    border-top: 4px solid var(--black);
-
-    transition: 0.3s ease;
-}
-
-
-.collection-card:hover {
-    transform: translateY(-7px);
-
-    border-top-color: var(--yellow);
-
-    box-shadow:
-        0 20px 40px rgba(0,0,0,0.08);
-}
-
-
-.card-number {
-    font-family: var(--mono);
-
-    color: var(--red);
-
-    font-size: 0.8rem;
-
-    margin-bottom: 40px;
-}
-
-
-.collection-card h3 {
-    font-family: var(--serif);
-
-    font-size: 1.7rem;
-
-    font-weight: 400;
-
-    margin-bottom: 15px;
-}
-
-
-.collection-card p {
-    color: var(--muted);
-
-    font-size: 0.95rem;
-}
-
-
-/* ================================================================
-   FEATURE IMAGE
-================================================================ */
-
-.feature-image {
-    position: relative;
-
-    height: 620px;
-
-    overflow: hidden;
-}
-
-
-.feature-image img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-}
-
-
-.feature-overlay {
-    position: absolute;
-
-    inset: 0;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-
-    align-items: center;
-
-    text-align: center;
-
-    padding: 30px;
-
-    color: white;
-
-    background:
-        rgba(0,0,0,0.48);
-}
-
-
-.feature-overlay .eyebrow {
-    color: var(--yellow);
-}
-
-
-.feature-overlay h2 {
-    font-family: var(--serif);
-
-    font-size: clamp(3rem, 7vw, 6rem);
-
-    font-weight: 400;
-
-    max-width: 900px;
-
-    line-height: 1;
-}
-
-
-/* ================================================================
-   GALLERY
-================================================================ */
-
-.gallery {
-    background: white;
-}
-
-
-.gallery-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
-    gap: 10px;
-}
-
-
-.gallery-item {
-    aspect-ratio: 1 / 1;
-
-    overflow: hidden;
-
-    cursor: pointer;
-
-    background: #ddd;
-}
-
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    transition: transform 0.5s ease;
-}
-
-
-.gallery-item:hover img {
-    transform: scale(1.08);
-}
-
-
-/* ================================================================
-   EXPERIENCE
-================================================================ */
-
-.experience {
-    background: var(--black);
-
-    color: white;
-}
-
-
-.experience-grid {
-    display: grid;
-
-    grid-template-columns:
-        1fr
-        1fr;
-
-    gap: 100px;
-}
-
-
-.experience h2 {
-    font-family: var(--serif);
-
-    font-size: clamp(2.5rem, 5vw, 5rem);
-
-    font-weight: 400;
-
-    line-height: 1;
-}
-
-
-.experience p {
-    color: rgba(255,255,255,0.7);
-
-    margin-bottom: 20px;
-}
-
-
-.text-link {
-    display: inline-block;
-
-    color: var(--yellow);
-
-    font-weight: 600;
-
-    margin-top: 15px;
-}
-
-
-/* ================================================================
-   VISIT
-================================================================ */
-
-.visit {
-    background: var(--off-white);
-}
-
-
-.visit-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 20px;
-}
-
-
-.visit-card {
-    background: white;
-
-    padding: 40px;
-
-    border-top: 3px solid var(--black);
-}
-
-
-.visit-icon {
-    font-size: 1.7rem;
-
-    display: block;
-
-    margin-bottom: 25px;
-}
-
-
-.visit-card h3 {
-    font-family: var(--serif);
-
-    font-size: 1.7rem;
-
-    font-weight: 400;
-
-    margin-bottom: 15px;
-}
-
-
-.visit-card p {
-    color: var(--muted);
-}
-
-
-.visit-cta {
-    margin-top: 60px;
-
-    padding: 60px;
-
-    background: var(--black);
-
-    color: white;
-
-    text-align: center;
-}
-
-
-.visit-cta h3 {
-    font-family: var(--serif);
-
-    font-size: 2.2rem;
-
-    font-weight: 400;
-
-    margin-bottom: 12px;
-}
-
-
-.visit-cta p {
-    color: rgba(255,255,255,0.7);
-
-    margin-bottom: 25px;
-}
-
-
-/* ================================================================
-   CONTACT
-================================================================ */
-
-.contact {
-    background: white;
-}
-
-
-.contact-grid {
-    display: grid;
-
-    grid-template-columns:
-        1.2fr
-        0.8fr;
-
-    gap: 100px;
-}
-
-
-.contact h2 {
-    font-family: var(--serif);
-
-    font-size: clamp(2.5rem, 5vw, 5rem);
-
-    line-height: 1.05;
-
-    font-weight: 400;
-
-    margin-bottom: 30px;
-}
-
-
-.contact-grid > div:first-child p {
-    max-width: 650px;
-
-    color: var(--muted);
-
-    font-size: 1.05rem;
-}
-
-
-.contact-details {
-    border-top: 1px solid var(--border);
-}
-
-
-.contact-details > div {
-    padding: 25px 0;
-
-    border-bottom: 1px solid var(--border);
-}
-
-
-.contact-details span {
-    display: block;
-
-    font-family: var(--mono);
-
-    font-size: 0.7rem;
-
-    text-transform: uppercase;
-
-    letter-spacing: 0.1em;
-
-    color: var(--red);
-
-    margin-bottom: 8px;
-}
-
-
-.contact-details a {
-    font-size: 1.1rem;
-
-    font-weight: 500;
-}
-
-
-.contact-details p {
-    color: var(--muted);
-}
-
-
-/* ================================================================
-   FOOTER
-================================================================ */
-
-.site-footer {
-    background: var(--black);
-
-    color: white;
-
-    padding-top: 70px;
-}
-
-
-.footer-grid {
-    display: grid;
-
-    grid-template-columns:
-        2fr
-        1fr
-        1fr;
-
-    gap: 60px;
-
-    padding-bottom: 60px;
-}
-
-
-.footer-brand img {
-    width: 190px;
-
-    background: white;
-
-    padding: 10px;
-
-    margin-bottom: 20px;
-}
-
-
-.footer-brand p {
-    max-width: 420px;
-
-    color: rgba(255,255,255,0.55);
-
-    font-size: 0.9rem;
-
-    margin-bottom: 10px;
-}
-
-
-.footer-links {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 10px;
-}
-
-
-.footer-links h4 {
-    color: var(--yellow);
-
-    font-family: var(--mono);
-
-    font-size: 0.75rem;
-
-    text-transform: uppercase;
-
-    letter-spacing: 0.12em;
-
-    margin-bottom: 10px;
-}
-
-
-.footer-links a {
-    color: rgba(255,255,255,0.7);
-
-    font-size: 0.9rem;
-
-    transition: 0.2s;
-}
-
-
-.footer-links a:hover {
-    color: white;
-}
-
-
-.footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.1);
-
-    padding: 25px 0;
-}
-
-
-.footer-bottom p {
-    color: rgba(255,255,255,0.4);
-
-    font-size: 0.75rem;
-}
-
-
-/* ================================================================
-   LIGHTBOX
-================================================================ */
-
-.lightbox {
-    position: fixed;
-
-    inset: 0;
-
-    z-index: 2000;
-
-    display: none;
-
-    align-items: center;
-
-    justify-content: center;
-
-    padding: 30px;
-
-    background: rgba(0,0,0,0.94);
-}
-
-
-.lightbox.active {
-    display: flex;
-}
-
-
-.lightbox img {
-    max-width: 95vw;
-    max-height: 90vh;
-
-    object-fit: contain;
-}
-
-
-.lightbox-close {
-    position: absolute;
-
-    top: 20px;
-    right: 25px;
-
-    border: 0;
-
-    background: transparent;
-
-    color: white;
-
-    font-size: 3rem;
-
-    line-height: 1;
-
-    cursor: pointer;
-}
-
-
-/* ================================================================
-   RESPONSIVE DESIGN
-================================================================ */
-
-@media (max-width: 1000px) {
-
-    .main-nav {
-        gap: 15px;
-    }
-
-    .collection-grid {
-        grid-template-columns:
-            repeat(2, 1fr);
-    }
-
-    .gallery-grid {
-        grid-template-columns:
-            repeat(3, 1fr);
-    }
-
-    .stats-grid {
-        grid-template-columns:
-            repeat(2, 1fr);
-    }
-
-    .stat:nth-child(2) {
-        border-right: 0;
-    }
-
-}
-
-
-@media (max-width: 768px) {
-
-    .section {
-        padding: 75px 0;
     }
 
 
-    /* MOBILE NAVIGATION */
 
-    .mobile-menu-btn {
-        display: block;
-    }
+    /* ============================================================
+       GALLERY LIGHTBOX
+    ============================================================ */
 
 
-    .main-nav {
-        display: none;
+    const galleryImages =
+        document.querySelectorAll(
+            ".gallery-item img"
+        );
 
-        position: absolute;
 
-        top: 82px;
+    const lightbox =
+        document.getElementById(
+            "lightbox"
+        );
 
-        left: 0;
 
-        right: 0;
+    const lightboxImage =
+        document.getElementById(
+            "lightboxImage"
+        );
 
-        padding: 20px;
 
-        flex-direction: column;
+    const lightboxClose =
+        document.getElementById(
+            "lightboxClose"
+        );
 
-        align-items: flex-start;
 
-        background: var(--black);
-    }
 
+    /* OPEN IMAGE */
 
-    .main-nav.active {
-        display: flex;
-    }
 
+    galleryImages.forEach(
+        image => {
 
-    .main-nav a {
-        width: 100%;
+            image.addEventListener(
+                "click",
+                () => {
 
-        padding: 12px 0;
 
-        border-bottom:
-            1px solid
-            rgba(255,255,255,0.08);
-    }
+                    lightboxImage.src =
+                        image.src;
 
 
-    /* HERO */
+                    lightboxImage.alt =
+                        image.alt;
 
-    .hero {
-        min-height: 800px;
-    }
 
+                    lightbox.classList.add(
+                        "active"
+                    );
 
-    .hero h1 {
-        font-size: 3.7rem;
-    }
 
+                    lightbox.setAttribute(
+                        "aria-hidden",
+                        "false"
+                    );
 
-    /* INTRO */
 
-    .intro-grid {
-        grid-template-columns: 1fr;
+                    document.body.style.overflow =
+                        "hidden";
 
-        gap: 40px;
-    }
-
-
-    .intro-image img {
-        height: 400px;
-    }
-
-
-    /* STATS */
-
-    .stats-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-
-    .stat {
-        border-right: 0;
-
-        border-bottom:
-            1px solid
-            rgba(255,255,255,0.12);
-    }
-
-
-    /* TIMELINE */
-
-    .timeline::before {
-        left: 10px;
-    }
-
-
-    .timeline-item {
-        grid-template-columns: 1fr;
-
-        gap: 12px;
-
-        padding-left: 40px;
-    }
-
-
-    .timeline-year {
-        text-align: left;
-    }
-
-
-    .timeline-content::before {
-        left: -39px;
-    }
-
-
-    /* COLLECTION */
-
-    .collection-grid {
-        grid-template-columns: 1fr;
-    }
-
-
-    /* GALLERY */
-
-    .gallery-grid {
-        grid-template-columns:
-            repeat(2, 1fr);
-    }
-
-
-    /* EXPERIENCE */
-
-    .experience-grid {
-        grid-template-columns: 1fr;
-
-        gap: 40px;
-    }
-
-
-    /* VISIT */
-
-    .visit-grid {
-        grid-template-columns: 1fr;
-    }
-
-
-    .visit-cta {
-        padding: 40px 20px;
-    }
-
-
-    /* CONTACT */
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-
-        gap: 50px;
-    }
-
-
-    /* FOOTER */
-
-    .footer-grid {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-
-@media (max-width: 480px) {
-
-    .logo img {
-        width: 125px;
-    }
-
-
-    .hero h1 {
-        font-size: 3rem;
-    }
-
-
-    .hero-description {
-        font-size: 1rem;
-    }
-
-
-    .hero-buttons {
-        flex-direction: column;
-    }
-
-
-    .btn {
-        width: 100%;
-    }
-
-
-    .stats-grid {
-        grid-template-columns: 1fr;
-    }
-
-
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
-
-
-    .feature-image {
-        height: 500px;
-    }
-
-}
-```
-
-## `script.js`
-
-```javascript
-/* ================================================================
-   UGANDA PRINTING & PUBLISHING MUSEUM
-   MAIN JAVASCRIPT
-================================================================ */
-
-
-/* ================================================================
-   MOBILE NAVIGATION
-================================================================ */
-
-const mobileMenuBtn = document.getElementById("mobileMenuBtn");
-const mainNav = document.getElementById("mainNav");
-
-if (mobileMenuBtn && mainNav) {
-
-    mobileMenuBtn.addEventListener("click", () => {
-
-        mainNav.classList.toggle("active");
-
-    });
-
-
-    /* Close mobile menu after clicking a link */
-
-    const navLinks = mainNav.querySelectorAll("a");
-
-    navLinks.forEach(link => {
-
-        link.addEventListener("click", () => {
-
-            mainNav.classList.remove("active");
-
-        });
-
-    });
-
-}
-
-
-/* ================================================================
-   GALLERY LIGHTBOX
-================================================================ */
-
-const galleryImages =
-    document.querySelectorAll(".gallery-item img");
-
-const lightbox =
-    document.getElementById("lightbox");
-
-const lightboxImage =
-    document.getElementById("lightboxImage");
-
-const lightboxClose =
-    document.getElementById("lightboxClose");
-
-
-/* Open image */
-
-galleryImages.forEach(image => {
-
-    image.addEventListener("click", () => {
-
-        lightboxImage.src = image.src;
-
-        lightboxImage.alt = image.alt;
-
-        lightbox.classList.add("active");
-
-        lightbox.setAttribute("aria-hidden", "false");
-
-        document.body.style.overflow = "hidden";
-
-    });
-
-});
-
-
-/* Close image */
-
-function closeLightbox() {
-
-    lightbox.classList.remove("active");
-
-    lightbox.setAttribute("aria-hidden", "true");
-
-    document.body.style.overflow = "";
-
-}
-
-
-if (lightboxClose) {
-
-    lightboxClose.addEventListener(
-        "click",
-        closeLightbox
-    );
-
-}
-
-
-/* Close when clicking outside image */
-
-if (lightbox) {
-
-    lightbox.addEventListener("click", event => {
-
-        if (event.target === lightbox) {
-
-            closeLightbox();
+                }
+            );
 
         }
-
-    });
-
-}
+    );
 
 
-/* Close with ESC */
 
-document.addEventListener("keydown", event => {
+    /* CLOSE LIGHTBOX */
 
-    if (event.key === "Escape") {
 
-        closeLightbox();
+    function closeLightbox() {
+
+
+        lightbox.classList.remove(
+            "active"
+        );
+
+
+        lightbox.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+
+        document.body.style.overflow =
+            "";
 
     }
 
-});
 
 
-/* ================================================================
-   AUTOMATIC COPYRIGHT YEAR
-================================================================ */
+    if (lightboxClose) {
 
-const yearElement =
-    document.getElementById("year");
 
-if (yearElement) {
+        lightboxClose.addEventListener(
+            "click",
+            closeLightbox
+        );
 
-    yearElement.textContent =
-        new Date().getFullYear();
+    }
 
-}
+
+
+    /* CLOSE WHEN CLICKING OUTSIDE IMAGE */
+
+
+    if (lightbox) {
+
+
+        lightbox.addEventListener(
+            "click",
+            event => {
+
+
+                if (
+                    event.target === lightbox
+                ) {
+
+                    closeLightbox();
+
+                }
+
+            }
+        );
+
+    }
+
+
+
+    /* CLOSE WITH ESCAPE KEY */
+
+
+    document.addEventListener(
+        "keydown",
+        event => {
+
+
+            if (
+                event.key === "Escape"
+            ) {
+
+                closeLightbox();
+
+            }
+
+        }
+    );
+
+
+
+    /* ============================================================
+       AUTOMATIC COPYRIGHT YEAR
+    ============================================================ */
+
+
+    const yearElement =
+        document.getElementById(
+            "year"
+        );
+
+
+    if (yearElement) {
+
+
+        yearElement.textContent =
+            new Date().getFullYear();
+
+    }
+
+
+</script>
+
+
+</body>
+
+</html>
 
