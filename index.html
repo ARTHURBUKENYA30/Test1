@@ -3,2428 +3,1058 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Uganda Printing & Publishing Museum</title>
-
-<meta name="description"
-content="Discover 120 years of Uganda's printing and publishing history.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
-rel="stylesheet">
+<meta name="description" content="Uganda Printing & Publishing Museum — preserving and celebrating Uganda's rich printing and publishing heritage from the missionary era to the digital age.">
 
 <style>
-
-/* =========================================================
-   EASY WEBSITE EDITING
-   =========================================================
-   Most colors can be changed here.
-
-   BLACK  = Main dark background
-   YELLOW = Main accent
-   RED    = Secondary accent
-   CREAM  = Light section background
-========================================================= */
-
-:root {
-    --black: #111111;
-    --black-2: #181818;
-    --white: #ffffff;
-    --cream: #f7f7f4;
-
-    --yellow: #f9d616;
-    --red: #d71920;
-    --black-brand: #000000;
-
-    --text: #222222;
-    --muted: #686868;
-    --border: #dedede;
-
-    --serif: "Playfair Display", Georgia, serif;
-    --sans: "Inter", Arial, sans-serif;
-    --mono: "JetBrains Mono", monospace;
-
-    --max-width: 1200px;
-}
-
-
-/* =========================================================
-   RESET
-========================================================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 82px;
-}
-
-body {
-    font-family: var(--sans);
-    color: var(--text);
-    background: var(--white);
-    line-height: 1.7;
-    overflow-x: hidden;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-button {
-    font-family: inherit;
-}
-
-
-/* =========================================================
-   GENERAL
-========================================================= */
-
-.container {
-    width: min(92%, var(--max-width));
-    margin: auto;
-}
-
-.section {
-    padding: 110px 0;
-}
-
-.eyebrow {
-    font-family: var(--mono);
-    font-size: .75rem;
-    letter-spacing: .16em;
-    text-transform: uppercase;
-    color: var(--red);
-    margin-bottom: 20px;
-}
-
-.section-heading {
-    max-width: 800px;
-    margin-bottom: 60px;
-}
-
-.section-heading h2 {
-    font-family: var(--serif);
-    font-weight: 400;
-    line-height: 1.08;
-    font-size: clamp(2.3rem, 5vw, 4.5rem);
-}
-
-.section-heading p:last-child {
-    color: var(--muted);
-    margin-top: 20px;
-}
-
-.heading-line {
-    width: 70px;
-    height: 5px;
-    margin-top: 28px;
-
-    background:
-        linear-gradient(
-            to right,
-            #000 0 33%,
-            var(--yellow) 33% 66%,
-            var(--red) 66% 100%
-        );
-}
-
-
-/* =========================================================
-   HEADER
-========================================================= */
-
-.site-header {
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    left: 0;
-    width: 100%;
-
-    background: rgba(0,0,0,.96);
-
-    border-bottom:
-        1px solid rgba(255,255,255,.08);
-
-    backdrop-filter: blur(12px);
-}
-
-.nav-container {
-    min-height: 82px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-}
-
-
-/* =========================================================
-   LOGO
-========================================================= */
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    width: 155px;
-    height: auto;
-    max-height: 65px;
-    object-fit: contain;
-}
-
-
-/* =========================================================
-   NAVIGATION
-========================================================= */
-
-.main-nav {
-    display: flex;
-    align-items: center;
-    gap: 28px;
-}
-
-.main-nav a {
-    color: white;
-    font-size: .82rem;
-    font-weight: 500;
-    transition: .25s;
-}
-
-.main-nav a:hover {
-    color: var(--yellow);
-}
-
-.mobile-menu-btn {
-    display: none;
-    background: transparent;
-    border: 0;
-    color: white;
-    font-size: 1.8rem;
-    cursor: pointer;
-}
-
-
-/* =========================================================
-   HERO
-   CHANGE images/3.jpg TO ANOTHER IMAGE IF REQUIRED
-========================================================= */
-
-.hero {
-    min-height: 100vh;
-
-    position: relative;
-
-    display: flex;
-    align-items: center;
-
-    background-image: url("images/3.jpg");
-
-    background-size: cover;
-    background-position: center;
-}
-
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(0,0,0,.88),
-            rgba(0,0,0,.60),
-            rgba(0,0,0,.30)
-        );
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-
-    max-width: 900px;
-
-    padding-top: 90px;
-
-    color: white;
-}
-
-.hero .eyebrow {
-    color: var(--yellow);
-}
-
-.hero h1 {
-    font-family: var(--serif);
-
-    font-size: clamp(3rem, 8vw, 7rem);
-
-    font-weight: 400;
-
-    line-height: .98;
-
-    margin-bottom: 30px;
-}
-
-.hero h1 span {
-    display: block;
-
-    color: var(--yellow);
-
-    font-style: italic;
-}
-
-.hero-description {
-    max-width: 680px;
-
-    color: rgba(255,255,255,.85);
-
-    font-size: 1.15rem;
-
-    margin-bottom: 40px;
-}
-
-
-/* =========================================================
-   BUTTONS
-========================================================= */
-
-.hero-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-}
-
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    min-height: 52px;
-
-    padding: 0 28px;
-
-    font-size: .82rem;
-    font-weight: 600;
-
-    text-transform: uppercase;
-    letter-spacing: .08em;
-
-    transition: .25s;
-}
-
-.btn-primary {
-    background: var(--yellow);
-    color: #000;
-}
-
-.btn-primary:hover {
-    background: white;
-    transform: translateY(-2px);
-}
-
-.btn-outline {
-    border: 1px solid rgba(255,255,255,.7);
-    color: white;
-}
-
-.btn-outline:hover {
-    background: white;
-    color: black;
-}
-
-
-/* =========================================================
-   ABOUT
-========================================================= */
-
-.intro {
-    background: var(--cream);
-}
-
-.intro-grid {
-    display: grid;
-
-    grid-template-columns:
-        minmax(0,1fr)
-        minmax(0,1fr);
-
-    gap: 80px;
-
-    align-items: center;
-}
-
-.intro-text {
-    max-width: 650px;
-}
-
-.intro-text .lead {
-    font-family: var(--serif);
-
-    font-size: 1.65rem;
-
-    line-height: 1.5;
-
-    margin-bottom: 30px;
-}
-
-.intro-text p {
-    color: #555;
-    margin-bottom: 20px;
-}
-
-.intro-image {
-    position: relative;
-}
-
-.intro-image img {
-    width: 100%;
-    height: 560px;
-
-    object-fit: cover;
-}
-
-.image-caption {
-    position: absolute;
-
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-    padding: 20px;
-
-    color: white;
-
-    background: rgba(0,0,0,.8);
-
-    font-size: .85rem;
-}
-
-
-/* =========================================================
-   STATISTICS
-========================================================= */
-
-.stats-section {
-    background: #000;
-    color: white;
-    padding: 55px 0;
-}
-
-.stats-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
-    gap: 30px;
-}
-
-.stat {
-    text-align: center;
-
-    padding: 15px;
-
-    border-right:
-        1px solid rgba(255,255,255,.12);
-}
-
-.stat:last-child {
-    border-right: 0;
-}
-
-.stat strong {
-    display: block;
-
-    font-family: var(--serif);
-
-    font-size: 3.5rem;
-
-    line-height: 1;
-
-    color: var(--yellow);
-
-    margin-bottom: 10px;
-}
-
-.stat span {
-    color: rgba(255,255,255,.65);
-
-    font-size: .78rem;
-
-    text-transform: uppercase;
-
-    letter-spacing: .1em;
-}
-
-
-/* =========================================================
-   HISTORY
-========================================================= */
-
-.history {
-    background: white;
-}
-
-.timeline {
-    max-width: 950px;
-    margin: auto;
-
-    position: relative;
-}
-
-.timeline::before {
-    content: "";
-
-    position: absolute;
-
-    left: 110px;
-    top: 0;
-    bottom: 0;
-
-    width: 2px;
-
-    background: var(--border);
-}
-
-.timeline-item {
-    display: grid;
-
-    grid-template-columns:
-        150px 1fr;
-
-    gap: 50px;
-
-    position: relative;
-
-    padding-bottom: 65px;
-}
-
-.timeline-item:last-child {
-    padding-bottom: 0;
-}
-
-.timeline-year {
-    font-family: var(--mono);
-
-    color: var(--red);
-
-    text-align: right;
-
-    font-size: 1rem;
-}
-
-.timeline-content {
-    position: relative;
-}
-
-.timeline-content::before {
-    content: "";
-
-    position: absolute;
-
-    left: -60px;
-    top: 4px;
-
-    width: 18px;
-    height: 18px;
-
-    border-radius: 50%;
-
-    background: var(--yellow);
-
-    border: 4px solid white;
-
-    box-shadow:
-        0 0 0 2px #000;
-}
-
-.timeline-content h3 {
-    font-family: var(--serif);
-
-    font-size: 2rem;
-
-    font-weight: 400;
-
-    margin-bottom: 12px;
-}
-
-.timeline-content p {
-    color: var(--muted);
-    max-width: 650px;
-}
-
-
-/* =========================================================
-   MUSEUM COLLECTION
-========================================================= */
-
-.museum {
-    background: var(--cream);
-}
-
-.collection-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
-    gap: 20px;
-}
-
-.collection-card {
-    background: white;
-
-    padding: 40px 30px;
-
-    min-height: 300px;
-
-    border-top:
-        4px solid #000;
-
-    transition: .3s;
-}
-
-.collection-card:hover {
-    transform: translateY(-7px);
-
-    border-top-color:
-        var(--yellow);
-
-    box-shadow:
-        0 20px 40px
-        rgba(0,0,0,.08);
-}
-
-.card-number {
-    font-family: var(--mono);
-
-    color: var(--red);
-
-    font-size: .8rem;
-
-    margin-bottom: 40px;
-}
-
-.collection-card h3 {
-    font-family: var(--serif);
-
-    font-size: 1.7rem;
-
-    font-weight: 400;
-
-    margin-bottom: 15px;
-}
-
-.collection-card p {
-    color: var(--muted);
-    font-size: .95rem;
-}
-
-
-/* =========================================================
-   FEATURE IMAGE
-========================================================= */
-
-.feature-image {
-    position: relative;
-
-    height: 620px;
-
-    overflow: hidden;
-}
-
-.feature-image img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-}
-
-.feature-overlay {
-    position: absolute;
-    inset: 0;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
-
-    padding: 30px;
-
-    color: white;
-
-    background: rgba(0,0,0,.48);
-}
-
-.feature-overlay .eyebrow {
-    color: var(--yellow);
-}
-
-.feature-overlay h2 {
-    font-family: var(--serif);
-
-    font-size:
-        clamp(3rem,7vw,6rem);
-
-    font-weight: 400;
-
-    line-height: 1;
-
-    max-width: 900px;
-}
-
-
-/* =========================================================
-   GALLERY
-========================================================= */
-
-.gallery {
-    background: white;
-}
-
-.gallery-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
-    gap: 10px;
-}
-
-.gallery-item {
-    aspect-ratio: 1/1;
-
-    overflow: hidden;
-
-    cursor: pointer;
-
-    background: #ddd;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    transition:
-        transform .5s ease;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.08);
-}
-
-
-/* =========================================================
-   EXPERIENCE
-========================================================= */
-
-.experience {
-    background: #000;
-    color: white;
-}
-
-.experience-grid {
-    display: grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap: 100px;
-}
-
-.experience h2 {
-    font-family: var(--serif);
-
-    font-size:
-        clamp(2.5rem,5vw,5rem);
-
-    font-weight: 400;
-
-    line-height: 1;
-}
-
-.experience p {
-    color: rgba(255,255,255,.7);
-
-    margin-bottom: 20px;
-}
-
-.text-link {
-    display: inline-block;
-
-    color: var(--yellow);
-
-    font-weight: 600;
-
-    margin-top: 15px;
-}
-
-
-/* =========================================================
-   VISIT
-========================================================= */
-
-.visit {
-    background: var(--cream);
-}
-
-.visit-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    gap: 20px;
-}
-
-.visit-card {
-    background: white;
-
-    padding: 40px;
-
-    border-top:
-        3px solid #000;
-}
-
-.visit-icon {
-    display: block;
-
-    font-size: 1.7rem;
-
-    margin-bottom: 25px;
-}
-
-.visit-card h3 {
-    font-family: var(--serif);
-
-    font-size: 1.7rem;
-
-    font-weight: 400;
-
-    margin-bottom: 15px;
-}
-
-.visit-card p {
-    color: var(--muted);
-}
-
-.visit-cta {
-    margin-top: 60px;
-
-    padding: 60px;
-
-    background: #000;
-
-    color: white;
-
-    text-align: center;
-}
-
-.visit-cta h3 {
-    font-family: var(--serif);
-
-    font-size: 2.2rem;
-
-    font-weight: 400;
-
-    margin-bottom: 12px;
-}
-
-.visit-cta p {
-    color: rgba(255,255,255,.7);
-
-    margin-bottom: 25px;
-}
-
-
-/* =========================================================
-   CONTACT
-========================================================= */
-
-.contact {
-    background: white;
-}
-
-.contact-grid {
-    display: grid;
-
-    grid-template-columns:
-        1.2fr .8fr;
-
-    gap: 100px;
-}
-
-.contact h2 {
-    font-family: var(--serif);
-
-    font-size:
-        clamp(2.5rem,5vw,5rem);
-
-    line-height: 1.05;
-
-    font-weight: 400;
-
-    margin-bottom: 30px;
-}
-
-.contact-grid > div:first-child p {
-    max-width: 650px;
-
-    color: var(--muted);
-
-    font-size: 1.05rem;
-}
-
-.contact-details {
-    border-top:
-        1px solid var(--border);
-}
-
-.contact-details > div {
-    padding: 25px 0;
-
-    border-bottom:
-        1px solid var(--border);
-}
-
-.contact-details span {
-    display: block;
-
-    font-family: var(--mono);
-
-    font-size: .7rem;
-
-    text-transform: uppercase;
-
-    letter-spacing: .1em;
-
-    color: var(--red);
-
-    margin-bottom: 8px;
-}
-
-.contact-details a {
-    font-size: 1.1rem;
-    font-weight: 500;
-}
-
-.contact-details p {
-    color: var(--muted);
-}
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-.site-footer {
-    background: #000;
-
-    color: white;
-
-    padding-top: 70px;
-}
-
-.footer-grid {
-    display: grid;
-
-    grid-template-columns:
-        2fr 1fr 1fr;
-
-    gap: 60px;
-
-    padding-bottom: 60px;
-}
-
-.footer-brand img {
-    width: 190px;
-
-    max-height: 80px;
-
-    object-fit: contain;
-
-    background: white;
-
-    padding: 8px;
-
-    margin-bottom: 20px;
-}
-
-.footer-brand p {
-    max-width: 420px;
-
-    color: rgba(255,255,255,.55);
-
-    font-size: .9rem;
-
-    margin-bottom: 10px;
-}
-
-.footer-links {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 10px;
-}
-
-.footer-links h4 {
-    color: var(--yellow);
-
-    font-family: var(--mono);
-
-    font-size: .75rem;
-
-    text-transform: uppercase;
-
-    letter-spacing: .12em;
-
-    margin-bottom: 10px;
-}
-
-.footer-links a {
-    color: rgba(255,255,255,.7);
-
-    font-size: .9rem;
-
-    transition: .2s;
-}
-
-.footer-links a:hover {
-    color: white;
-}
-
-.footer-bottom {
-    border-top:
-        1px solid rgba(255,255,255,.1);
-
-    padding: 25px 0;
-}
-
-.footer-bottom p {
-    color: rgba(255,255,255,.4);
-
-    font-size: .75rem;
-}
-
-
-/* =========================================================
-   LIGHTBOX
-========================================================= */
-
-.lightbox {
-    position: fixed;
-
-    inset: 0;
-
-    z-index: 2000;
-
-    display: none;
-
-    align-items: center;
-    justify-content: center;
-
-    padding: 30px;
-
-    background: rgba(0,0,0,.94);
-}
-
-.lightbox.active {
-    display: flex;
-}
-
-.lightbox img {
-    max-width: 95vw;
-    max-height: 90vh;
-
-    object-fit: contain;
-}
-
-.lightbox-close {
-    position: absolute;
-
-    top: 20px;
-    right: 25px;
-
-    border: 0;
-
-    background: transparent;
-
-    color: white;
-
-    font-size: 3rem;
-
-    cursor: pointer;
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width:1000px) {
-
-    .collection-grid {
-        grid-template-columns:
-            repeat(2,1fr);
-    }
-
-    .gallery-grid {
-        grid-template-columns:
-            repeat(3,1fr);
-    }
-
-    .stats-grid {
-        grid-template-columns:
-            repeat(2,1fr);
-    }
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width:768px) {
-
-    .section {
-        padding: 75px 0;
-    }
-
-    .mobile-menu-btn {
-        display: block;
-    }
-
-    .main-nav {
-        display: none;
-
-        position: absolute;
-
-        top: 82px;
-        left: 0;
-        right: 0;
-
-        padding: 20px;
-
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        background: #000;
-    }
-
-    .main-nav.active {
-        display: flex;
-    }
-
-    .main-nav a {
-        width: 100%;
-
-        padding: 12px 0;
-
-        border-bottom:
-            1px solid
-            rgba(255,255,255,.08);
-    }
-
-    .hero {
-        min-height: 800px;
-    }
-
-    .hero h1 {
-        font-size: 3.7rem;
-    }
-
-    .intro-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .intro-image img {
-        height: 400px;
-    }
-
-    .stats-grid {
-        grid-template-columns:
-            1fr 1fr;
-    }
-
-    .timeline::before {
-        left: 10px;
-    }
-
-    .timeline-item {
-        grid-template-columns: 1fr;
-
-        gap: 12px;
-
-        padding-left: 40px;
-    }
-
-    .timeline-year {
-        text-align: left;
-    }
-
-    .timeline-content::before {
-        left: -39px;
-    }
-
-    .collection-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .gallery-grid {
-        grid-template-columns:
-            repeat(2,1fr);
-    }
-
-    .experience-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .visit-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .visit-cta {
-        padding: 40px 20px;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 50px;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-/* =========================================================
-   SMALL PHONES
-========================================================= */
-
-@media (max-width:480px) {
-
-    .logo img {
-        width: 125px;
-    }
-
-    .hero h1 {
-        font-size: 3rem;
-    }
-
-    .hero-description {
-        font-size: 1rem;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-    }
-
-    .btn {
-        width: 100%;
-    }
-
-    .stats-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .feature-image {
-        height: 500px;
-    }
-}
-
+/* ============================================================
+   UGANDA PRINTING & PUBLISHING MUSEUM
+   ONE-FILE WEBSITE — EDIT EVERYTHING IN THIS FILE
+   Images are loaded from: images/ (logo.png and 1.jpg–18.jpg)
+   ============================================================ */
+
+:root{
+  --green:#00843D;
+  --green-dark:#005A2B;
+  --green-deep:#003B20;
+  --gold:#F4C300;
+  --red:#D32027;
+  --black:#111;
+  --white:#fff;
+  --cream:#F7F8F5;
+  --paper:#EEF4EF;
+  --muted:#6b6b63;
+  --line:#D8E1DA;
+  --shadow:0 18px 50px rgba(0,0,0,.10);
+  --max:1200px;
+  --radius:14px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--black);background:var(--white);line-height:1.65}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+button,input,textarea{font:inherit}
+.container{width:min(92%,var(--max));margin:auto}
+.section{padding:90px 0}
+.cream{background:var(--cream)}
+.green-bg{background:var(--green);color:#fff}
+.paper-bg{background:var(--paper)}
+.muted{color:var(--muted)}
+.eyebrow{text-transform:uppercase;letter-spacing:2px;color:var(--green);font-size:.78rem;font-weight:900;margin-bottom:9px}
+.section-title{font-size:clamp(2.1rem,5vw,3.5rem);line-height:1.05;color:var(--green-dark);margin-bottom:18px}
+.section-intro{max-width:760px;color:var(--muted);margin-bottom:45px}
+.center{text-align:center;margin-left:auto;margin-right:auto}
+
+/* TOP BAR */
+.topbar{background:var(--green-dark);color:#fff;font-size:.82rem}
+.topbar .container{min-height:36px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+
+/* HEADER */
+header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line);box-shadow:0 3px 18px rgba(0,0,0,.06);backdrop-filter:blur(10px)}
+.nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:55px;height:55px;object-fit:contain}
+.logo-fallback{width:55px;height:55px;border-radius:50%;display:none;place-items:center;background:var(--green);color:var(--gold);font-weight:900;border:3px solid var(--gold)}
+.brand strong{display:block;color:var(--green-dark);font-size:1rem;line-height:1.15}
+.brand small{display:block;color:var(--muted);font-size:.72rem}
+.nav-links{display:flex;gap:3px;list-style:none;align-items:center}
+.nav-links a{padding:10px 12px;border-radius:8px;font-size:.88rem;font-weight:800}
+.nav-links a:hover,.nav-links a.active{background:#e8f4ee;color:var(--green)}
+.menu{display:none;background:var(--green);color:#fff;border:0;border-radius:8px;width:44px;height:40px;font-size:1.3rem}
+
+/* HERO */
+.hero{
+  min-height:700px;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+  background:
+    linear-gradient(90deg,rgba(0,45,27,.94),rgba(0,73,43,.75),rgba(0,0,0,.24)),
+    url("images/1.jpg") center/cover no-repeat;
+}
+.hero:after{content:"";position:absolute;bottom:0;left:0;right:0;height:8px;background:linear-gradient(90deg,#000 0 33.33%,var(--gold) 33.33% 66.66%,var(--red) 66.66%)}
+.hero-content{max-width:850px;padding:100px 0}
+.hero-kicker{display:inline-block;border:1px solid rgba(242,201,76,.7);color:var(--gold);padding:7px 14px;border-radius:50px;font-weight:900;letter-spacing:1.5px;font-size:.76rem;text-transform:uppercase;margin-bottom:20px}
+.hero h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(3rem,7vw,6.2rem);line-height:.92;letter-spacing:-3px;margin-bottom:25px}
+.hero h1 span{color:var(--gold)}
+.hero p{font-size:clamp(1rem,2vw,1.2rem);max-width:760px;color:rgba(255,255,255,.91);margin-bottom:30px}
+.buttons{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;border-radius:8px;border:2px solid transparent;font-weight:900;cursor:pointer;transition:.2s}
+.btn-gold{background:var(--gold);color:#161616}
+.btn-gold:hover{background:#fff;transform:translateY(-2px)}
+.btn-outline{border-color:#fff;color:#fff}
+.btn-outline:hover{background:#fff;color:var(--green-dark)}
+.btn-green{background:var(--green);color:#fff}
+.btn-green:hover{background:var(--green-dark)}
+
+/* QUOTE + STATS */
+.quote{padding:48px 20px;background:var(--cream);text-align:center}
+.quote blockquote{max-width:850px;margin:auto;font:italic 1.35rem/1.6 Georgia,serif;color:var(--green-dark)}
+.quote cite{display:block;margin-top:12px;color:var(--muted);font-style:normal;font-weight:700}
+.stats{background:var(--green);color:#fff;padding:42px 0}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center}
+.stat strong{display:block;color:var(--gold);font-size:clamp(2.4rem,5vw,3.5rem);line-height:1}
+.stat span{font-weight:700;color:rgba(255,255,255,.82)}
+
+/* HISTORY */
+.history-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:55px}
+.timeline{position:relative;max-width:950px;margin:auto}
+.timeline:before{content:"";position:absolute;left:50%;top:0;bottom:0;width:3px;background:var(--green);transform:translateX(-50%)}
+.timeline-item{width:50%;position:relative;padding:0 50px 50px}
+.timeline-item:nth-child(odd){margin-right:auto;text-align:right}
+.timeline-item:nth-child(even){margin-left:auto}
+.timeline-dot{position:absolute;top:5px;width:18px;height:18px;border-radius:50%;background:var(--gold);border:4px solid var(--green)}
+.timeline-item:nth-child(odd) .timeline-dot{right:-9px}
+.timeline-item:nth-child(even) .timeline-dot{left:-9px}
+.timeline-year{color:var(--green);font-size:1.15rem;font-weight:900}
+.timeline-item h3{color:var(--green-dark);font-family:Georgia,serif;font-size:1.35rem;margin:4px 0 8px}
+.timeline-item p{color:var(--muted)}
+.tag{display:inline-block;background:#e9f4ed;color:var(--green);font-size:.7rem;text-transform:uppercase;font-weight:900;padding:4px 9px;border-radius:30px;margin-top:10px}
+
+/* EXHIBITIONS */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 5px 22px rgba(0,0,0,.05);transition:.25s}
+.card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.card-image{height:220px;background:#dce8df;overflow:hidden}
+.card-image img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.card:hover img{transform:scale(1.05)}
+.card-body{padding:23px}
+.card-body h3{color:var(--green-dark);font:700 1.35rem Georgia,serif;margin-bottom:9px}
+.card-body p{color:var(--muted);font-size:.93rem}
+.card-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}
+
+/* PRINT PROCESS */
+.process{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.process-card{background:#fff;border:1px solid var(--line);padding:25px;border-radius:var(--radius)}
+.process-card .era{font-weight:900;color:var(--green);font-size:.84rem}
+.process-card h3{font:700 1.35rem Georgia,serif;color:var(--green-dark);margin:8px 0}
+.process-card p{color:var(--muted);font-size:.93rem}
+
+/* COLLECTION */
+.collection-filter{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:30px}
+.filter{border:1px solid var(--line);background:#fff;color:var(--green-dark);padding:9px 14px;border-radius:30px;font-weight:800;cursor:pointer}
+.filter.active,.filter:hover{background:var(--green);color:#fff;border-color:var(--green)}
+.collection-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.collection-item.hidden{display:none}
+.collection-item .card-image{height:230px}
+.details{margin-top:13px;color:var(--green);font-weight:900;display:inline-block}
+
+/* GLOBAL */
+.global-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.global-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+.global-card h3{font:700 1.35rem Georgia,serif;color:var(--green-dark);margin-bottom:8px}
+.global-card h4{color:var(--green);margin-top:20px;margin-bottom:5px}
+.global-card p{color:var(--muted)}
+.table-wrap{overflow:auto;margin-top:30px}
+table{width:100%;border-collapse:collapse;background:#fff;min-width:750px}
+th,td{text-align:left;padding:14px;border:1px solid var(--line);vertical-align:top}
+th{background:var(--green);color:#fff}
+tr:nth-child(even){background:#faf8f0}
+
+/* EDUCATION */
+.education-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.edu-card{background:#fff;border:1px solid var(--line);padding:28px;border-radius:var(--radius)}
+.edu-card h3{color:var(--green-dark);font:700 1.4rem Georgia,serif}
+.edu-card h4{margin:7px 0 10px;color:var(--green)}
+.edu-card p{color:var(--muted)}
+.edu-card ul{margin:15px 0 0 20px;color:var(--muted)}
+
+/* ARCHIVES */
+.archive-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:25px}
+.archive-card{background:var(--green);color:#fff;border-radius:var(--radius);padding:30px}
+.archive-card h3{font:700 1.5rem Georgia,serif;color:var(--gold);margin-bottom:10px}
+.archive-card p{color:rgba(255,255,255,.82)}
+.archive-stats{display:flex;gap:25px;flex-wrap:wrap;margin-top:22px}
+.archive-stat strong{display:block;font-size:1.8rem;color:#fff}
+.archive-stat span{font-size:.8rem;color:rgba(255,255,255,.65)}
+
+/* VISIT */
+.visit-box{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;background:var(--green-dark);color:#fff;border-radius:20px;padding:50px;box-shadow:var(--shadow)}
+.visit-box h2{font:700 clamp(2rem,4vw,3.2rem)/1.05 Georgia,serif;margin-bottom:16px}
+.visit-box p{color:rgba(255,255,255,.82)}
+.visit-details{display:grid;gap:12px}
+.visit-detail{background:rgba(255,255,255,.08);border-left:4px solid var(--gold);padding:13px 16px;border-radius:8px}
+.visit-detail strong{display:block;color:var(--gold);font-size:.75rem;text-transform:uppercase;letter-spacing:1px}
+
+/* NEWSLETTER */
+.newsletter{background:var(--gold);padding:55px 0}
+.newsletter-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}
+.newsletter h2{color:var(--green-dark);font:700 2rem Georgia,serif}
+.newsletter p{color:#4d421b}
+.newsletter-form{display:flex;gap:8px;min-width:420px}
+.newsletter-form input{flex:1;padding:13px;border:0;border-radius:7px}
+
+/* FOOTER */
+footer{background:var(--green-deep);color:#fff;padding-top:65px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:35px;padding-bottom:45px}
+footer h3{color:var(--gold);font:700 1.5rem Georgia,serif;margin-bottom:12px}
+footer h4{margin-bottom:12px}
+footer p,footer li,footer a{color:rgba(255,255,255,.7)}
+footer a:hover{color:var(--gold)}
+footer ul{list-style:none}
+footer li{margin:7px 0}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding:20px 0;text-align:center;font-size:.82rem;color:rgba(255,255,255,.55)}
+
+/* MODAL */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.78);display:none;place-items:center;padding:25px;z-index:3000}
+.modal.open{display:grid}
+.modal-box{background:#fff;max-width:680px;width:100%;max-height:88vh;overflow:auto;border-radius:15px;padding:30px;position:relative}
+.modal-close{position:absolute;right:15px;top:10px;border:0;background:none;font-size:2rem;cursor:pointer;color:var(--green-dark)}
+.modal-box h2{font:700 2rem Georgia,serif;color:var(--green-dark);margin-bottom:12px}
+.modal-box p{color:var(--muted)}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+  .nav-links{position:absolute;left:0;right:0;top:82px;background:#fff;display:none;flex-direction:column;align-items:stretch;padding:12px 4%;border-bottom:1px solid var(--line)}
+  .nav-links.open{display:flex}
+  .menu{display:block}
+  .cards,.collection-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:750px){
+  .section{padding:65px 0}
+  .topbar .container{justify-content:center}
+  .topbar .container div:last-child{display:none}
+  .hero{min-height:650px}
+  .hero h1{letter-spacing:-1.5px}
+  .stats-grid,.process,.global-grid,.education-grid,.archive-grid,.visit-box{grid-template-columns:1fr}
+  .history-head{display:block}
+  .timeline:before{left:9px;transform:none}
+  .timeline-item,.timeline-item:nth-child(odd),.timeline-item:nth-child(even){width:100%;padding:0 0 40px 40px;text-align:left;margin:0}
+  .timeline-item:nth-child(odd) .timeline-dot,.timeline-item:nth-child(even) .timeline-dot{left:0;right:auto}
+  .cards,.collection-grid{grid-template-columns:1fr}
+  .newsletter-inner{display:block}
+  .newsletter-form{min-width:0;margin-top:20px}
+  .footer-grid{grid-template-columns:1fr}
+}
+@media(max-width:500px){
+  .brand small{display:none}
+  .brand strong{font-size:.82rem}
+  .logo,.logo-fallback{width:45px;height:45px}
+  .hero-content{padding:75px 0}
+  .hero-buttons .btn{width:100%}
+  .newsletter-form{display:block}
+  .newsletter-form input,.newsletter-form button{width:100%;margin-bottom:8px}
+}
+
+/* EDITOR TIP */
+.edit-note{font-size:.75rem;color:var(--muted);margin-top:10px}
 </style>
 </head>
 
-
 <body>
+<link rel="preload" as="image" href="images/14.jpg">
+<link rel="preload" as="image" href="images/15.jpg">
+<link rel="preload" as="image" href="images/16.jpg">
+<link rel="preload" as="image" href="images/17.jpg">
+<link rel="preload" as="image" href="images/18.jpg">
 
 
-<!-- =========================================================
+<!-- ============================================================
      HEADER
-========================================================= -->
-
-<header class="site-header">
-
-<div class="container nav-container">
-
-<a href="#home" class="logo">
-
-<img
-src="images/logo.png"
-alt="Uganda Printing and Publishing Corporation Logo"
->
-
-</a>
-
-
-<button
-class="mobile-menu-btn"
-id="mobileMenuBtn"
-aria-label="Open menu"
-aria-expanded="false"
->
-☰
-</button>
-
-
-<nav class="main-nav" id="mainNav">
-
-<a href="#home">Home</a>
-
-<a href="#about">About</a>
-
-<a href="#history">History</a>
-
-<a href="#museum">Museum</a>
-
-<a href="#gallery">Gallery</a>
-
-<a href="#visit">Visit</a>
-
-<a href="#contact">Contact</a>
-
-</nav>
-
+     ============================================================ -->
+<div class="topbar">
+  <div class="container">
+    <div>Est. 1902 — Uganda's Print Heritage</div>
+    <div>+256 414 433700 &nbsp; · &nbsp; info@ugandaprintmuseum.org</div>
+  </div>
 </div>
 
+<header>
+  <div class="container nav">
+    <a href="#home" class="brand">
+      <!-- PUT YOUR LOGO IN images/logo.png -->
+      <img class="logo" src="images/logo.png" alt="Uganda Printing & Publishing Museum logo"
+           onerror="this.style.display='none';document.getElementById('logoFallback').style.display='grid'">
+      <span id="logoFallback" class="logo-fallback">UG</span>
+      <span>
+        <strong>UGANDA</strong>
+        <strong>Printing &amp; Publishing Museum</strong>
+        <small>Preserving 120 years of print heritage</small>
+      </span>
+    </a>
+
+    <button class="menu" id="menu">☰</button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#history">History</a></li>
+      <li><a href="#collection">Collection</a></li>
+      <li><a href="#exhibitions">Exhibitions</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#visit">Visit</a></li>
+      <li><a href="#donate">Donate</a></li>
+    </ul>
+  </div>
 </header>
 
-
-<!-- =========================================================
+<!-- ============================================================
      HERO
-     CHANGE THE TEXT BELOW TO EDIT THE HERO
-========================================================= -->
-
+     Change images/1.jpg to any image in your images folder.
+     ============================================================ -->
 <section class="hero" id="home">
-
-<div class="hero-overlay"></div>
-
-<div class="container hero-content">
-
-<p class="eyebrow">
-UGANDA PRINTING & PUBLISHING MUSEUM
-</p>
-
-<h1>
-Preserving
-<span>120 Years</span>
-of Print Heritage
-</h1>
-
-<p class="hero-description">
-
-Discover 120 years of Uganda's printing and publishing
-history — from the 1902 Government Printer to today's
-digital revolution.
-
-</p>
-
-<div class="hero-buttons">
-
-<a
-href="#history"
-class="btn btn-primary"
->
-Explore Our History
-</a>
-
-<a
-href="#gallery"
-class="btn btn-outline"
->
-View Gallery
-</a>
-
-</div>
-
-</div>
-
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-kicker">Est. 1902 — Uganda's Print Heritage</div>
+      <h1>Where Words <span>Shaped a Nation</span></h1>
+      <p>
+        Discover 120 years of Uganda's printing and publishing history —
+        from the 1902 Government Printer to today's digital revolution.
+      </p>
+      <div class="buttons">
+        <a class="btn btn-gold" href="#collection">Explore Collection</a>
+        <a class="btn btn-outline" href="#visit">Plan Your Visit</a>
+      </div>
+    </div>
+  </div>
 </section>
 
-
-<!-- =========================================================
-     ABOUT
-========================================================= -->
-
-<section class="intro section" id="about">
-
-<div class="container">
-
-<div class="section-heading">
-
-<p class="eyebrow">
-OUR HERITAGE
-</p>
-
-<h2>
-Where Uganda's printed history comes alive
-</h2>
-
-<div class="heading-line"></div>
-
-</div>
-
-
-<div class="intro-grid">
-
-
-<div class="intro-text">
-
-<p class="lead">
-
-The Uganda Printing & Publishing Museum celebrates
-more than a century of printing, publishing,
-journalism, design and information preservation
-in Uganda.
-
-</p>
-
-<p>
-
-From early government publications and newspapers
-to modern digital production, printing has played
-a major role in documenting Uganda's political,
-social, cultural and economic development.
-
-</p>
-
-<p>
-
-The museum provides a space where visitors can
-explore historic printing equipment, publications,
-photographs, documents and the people behind
-Uganda's print heritage.
-
-</p>
-
-</div>
-
-
-<div class="intro-image">
-
-<img
-src="images/1.jpg"
-alt="Uganda printing heritage"
->
-
-<div class="image-caption">
-
-Preserving Uganda's print heritage
-for future generations.
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
+<section class="quote">
+  <blockquote>
+    “The printing press is the greatest weapon in the armoury of the modern architect,
+    and we must use it to build a nation.”
+  </blockquote>
+  <cite>— Inspired by Uganda's Publishing Pioneers</cite>
 </section>
 
-
-<!-- =========================================================
-     STATISTICS
-========================================================= -->
-
-<section class="stats-section">
-
-<div class="container stats-grid">
-
-<div class="stat">
-
-<strong>120+</strong>
-
-<span>
-Years of Heritage
-</span>
-
-</div>
-
-
-<div class="stat">
-
-<strong>1902</strong>
-
-<span>
-Government Printer Era
-</span>
-
-</div>
-
-
-<div class="stat">
-
-<strong>1</strong>
-
-<span>
-Print Heritage Museum
-</span>
-
-</div>
-
-
-<div class="stat">
-
-<strong>100+</strong>
-
-<span>
-Years of Publications
-</span>
-
-</div>
-
-</div>
-
+<section class="stats">
+  <div class="container stats-grid">
+    <div class="stat"><strong>120+</strong><span>Years of History</span></div>
+    <div class="stat"><strong>50K+</strong><span>Artifacts Preserved</span></div>
+    <div class="stat"><strong>6</strong><span>Exhibition Zones</span></div>
+  </div>
 </section>
 
-
-<!-- =========================================================
+<!-- ============================================================
      HISTORY
-========================================================= -->
+     ============================================================ -->
+<section class="section" id="history">
+  <div class="container">
+    <div class="history-head">
+      <div>
+        <div class="eyebrow">Historical Journey</div>
+        <h2 class="section-title">The Imprint of a Nation</h2>
+      </div>
+      <p class="section-intro" style="margin:0;max-width:520px">
+        Follow Uganda's printing and publishing story from missionary presses
+        and colonial government printing to independence, press liberalization
+        and the digital age.
+      </p>
+    </div>
 
-<section class="history section" id="history">
+    <div class="timeline">
 
-<div class="container">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">1902</div>
+        <h3>The Government Printer Born</h3>
+        <p>The Uganda Printing and Publishing Corporation (UPPC) is established as the Government Printer under British colonial rule. It becomes the sole authorized printer of government documents, including the Uganda Gazette, and remains one of Uganda's oldest institutions.</p>
+        <span class="tag">Colonial Era</span>
+      </div>
 
-<div class="section-heading">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">1890s</div>
+        <h3>Missionary Press Arrives</h3>
+        <p>Church Missionary Society brings the first hand presses to Uganda. Early Luganda primers and hymnals are printed, including Enjiri Eya Matayo (Gospel of Matthew, 1896). The first Baganda typesetters are trained at Namirembe.</p>
+        <span class="tag">Missionary Period</span>
+      </div>
 
-<p class="eyebrow">
-OUR TIMELINE
-</p>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">1945</div>
+        <h3>The Nationalist Press Emerges</h3>
+        <p>African-owned newspapers like Mugobansonga, Uganda Star (1949), and Buganda Nyaffe mobilize nationalist movements. The 1948 Press Censorship Ordinance attempts to suppress growing political consciousness through print.</p>
+        <span class="tag">Nationalism</span>
+      </div>
 
-<h2>
-A Century of Printing in Uganda
-</h2>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">1955</div>
+        <h3>Uganda Argus Founded</h3>
+        <p>The first English-language daily newspaper, the Uganda Argus, is established. It becomes the primary source of news for the educated elite and sets the standard for professional journalism in the territory.</p>
+        <span class="tag">Press Development</span>
+      </div>
 
-<div class="heading-line"></div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">1962</div>
+        <h3>Independence &amp; State Control</h3>
+        <p>Uganda gains independence. Milton Obote's government nationalizes the Uganda Argus (1967), renaming it Voice of Uganda. The government establishes regional newspapers in Runyankore, Ateso, Luo, and Lugbara to extend state influence.</p>
+        <span class="tag">Independence</span>
+      </div>
 
-</div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">1971</div>
+        <h3>Amin's Censorship Regime</h3>
+        <p>Idi Amin establishes the Press Censorship Unit under the State Research Bureau. Every newspaper proof must be submitted for approval. The Voice of Uganda announces Amin's 1971 coup. Journalist Byron Kawadwa is murdered in 1977.</p>
+        <span class="tag">Suppression</span>
+      </div>
 
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">1986</div>
+        <h3>The Liberalization Era</h3>
+        <p>The National Resistance Movement comes to power. New Vision is founded in 1986 as a government-owned but editorially independent newspaper. The Monitor (1992) emerges as the first major private daily, creating a vibrant competitive press landscape.</p>
+        <span class="tag">Press Freedom</span>
+      </div>
 
-<div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">1992</div>
+        <h3>UPPC Corporatization</h3>
+        <p>The Uganda Printing and Publishing Corporation Act transforms the Government Printer into a state-owned enterprise. UPPC establishes a College of Printing to train the next generation of printers in offset lithography and emerging digital technologies.</p>
+        <span class="tag">Modernization</span>
+      </div>
 
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">2018</div>
+        <h3>Digital Transformation</h3>
+        <p>UPPC launches the E-Gazette, digitizing the official government bulletin. Social media transforms journalism. The Computer Misuse Act raises new questions about digital press freedom. UPPC acquires HP Indigo digital presses for security printing.</p>
+        <span class="tag">Digital Age</span>
+      </div>
 
-<article class="timeline-item">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">2026</div>
+        <h3>The Museum Vision</h3>
+        <p>Plans are unveiled for the Uganda Printing and Publishing Museum — the first dedicated printing museum in East Africa. Building on UPPC's planned national archive and mini-museum, the institution will preserve 120 years of material print culture for future generations.</p>
+        <span class="tag">Future</span>
+      </div>
 
-<div class="timeline-year">
-1902
-</div>
-
-<div class="timeline-content">
-
-<h3>
-The Government Printer
-</h3>
-
-<p>
-
-Uganda's printing history reaches a major milestone
-with the establishment of the Government Printer
-during the colonial period.
-
-</p>
-
-</div>
-
-</article>
-
-
-<article class="timeline-item">
-
-<div class="timeline-year">
-1962
-</div>
-
-<div class="timeline-content">
-
-<h3>
-Independence Era
-</h3>
-
-<p>
-
-Following independence, government printing continued
-to support the production of official documents,
-publications and national information.
-
-</p>
-
-</div>
-
-</article>
-
-
-<article class="timeline-item">
-
-<div class="timeline-year">
-1992
-</div>
-
-<div class="timeline-content">
-
-<h3>
-Uganda Printing & Publishing Corporation
-</h3>
-
-<p>
-
-The Uganda Printing and Publishing Corporation
-was established as a public enterprise.
-
-</p>
-
-</div>
-
-</article>
-
-
-<article class="timeline-item">
-
-<div class="timeline-year">
-2000s
-</div>
-
-<div class="timeline-content">
-
-<h3>
-Digital Transformation
-</h3>
-
-<p>
-
-Printing and publishing increasingly adopted
-digital workflows, modern production systems
-and electronic publishing technologies.
-
-</p>
-
-</div>
-
-</article>
-
-
-<article class="timeline-item">
-
-<div class="timeline-year">
-TODAY
-</div>
-
-<div class="timeline-content">
-
-<h3>
-Preserving the Future
-</h3>
-
-<p>
-
-The museum brings together Uganda's printing heritage
-and the technologies shaping the future of publishing.
-
-</p>
-
-</div>
-
-</article>
-
-</div>
-
-</div>
-
+    </div>
+  </div>
 </section>
 
+<!-- ============================================================
+     EXHIBITIONS
+     ============================================================ -->
+<section class="section cream" id="exhibitions">
+  <div class="container">
+    <div class="center">
+      <div class="eyebrow">Permanent Exhibitions</div>
+      <h2 class="section-title">Six Zones, One Story</h2>
+      <p class="section-intro center">
+        Six immersive exhibition zones trace the evolution of printing,
+        publishing, journalism and public information in Uganda.
+      </p>
+    </div>
 
-<!-- =========================================================
-     MUSEUM COLLECTION
-========================================================= -->
+    <div class="cards">
 
-<section class="museum section" id="museum">
+      <article class="card">
+        <div class="card-image"><img src="images/2.jpg" alt="Missionary Press"></div>
+        <div class="card-body">
+          <h3>The Missionary Press</h3>
+          <p>Explore the arrival of the first hand presses with the Church Missionary Society in the 1890s. See original Luganda primers, hymnals, and the tools that brought literacy to Uganda's kingdoms. Interactive hand-press station where visitors print their own Luganda proverb.</p>
+          <div class="card-meta"><span class="tag">1890s–1920s</span><span class="tag">Interactive</span></div>
+        </div>
+      </article>
 
-<div class="container">
+      <article class="card">
+        <div class="card-image"><img src="images/3.jpg" alt="Government Printer"></div>
+        <div class="card-body">
+          <h3>The Government Printer</h3>
+          <p>Step into the industrial warehouse aesthetic of the 1902 Government Printer. See restored Monotype machines, hot metal casting demonstrations, and the complete bound archive of the Uganda Gazette from Volume 1, Issue 1. Touchscreen database of colonial-era laws.</p>
+          <div class="card-meta"><span class="tag">1902–1962</span><span class="tag">Live Demo</span></div>
+        </div>
+      </article>
 
-<div class="section-heading">
+      <article class="card">
+        <div class="card-image"><img src="images/4.jpg" alt="Nationalist Press"></div>
+        <div class="card-body">
+          <h3>The Nationalist Press</h3>
+          <p>Experience the clandestine atmosphere of underground publishing. Surviving issues of Mugobansonga, Uganda Star, and mimeograph machines used for political pamphlets. Dramatic reconstruction of banned newspaper distribution. Oral histories from veteran journalists.</p>
+          <div class="card-meta"><span class="tag">1945–1962</span><span class="tag">Oral History</span></div>
+        </div>
+      </article>
 
-<p class="eyebrow">
-THE COLLECTION
-</p>
+      <article class="card">
+        <div class="card-image"><img src="images/5.jpg" alt="Independence and State Control"></div>
+        <div class="card-body">
+          <h3>Independence &amp; State Control</h3>
+          <p>Witness the euphoria of 1962 transitioning to the fear of the 1970s. Amin's censorship stamps, the Voice of Uganda coup announcement, and the “Be the Censor” interactive where visitors experience the weight of state control. Typewriter from Makindye Military Barracks.</p>
+          <div class="card-meta"><span class="tag">1962–1986</span><span class="tag">Censorship</span></div>
+        </div>
+      </article>
 
-<h2>
-What You Will Discover
-</h2>
+      <article class="card">
+        <div class="card-image"><img src="images/6.jpg" alt="Liberalization Era"></div>
+        <div class="card-body">
+          <h3>The Liberalization Era</h3>
+          <p>An explosion of color, sound, and movement. First issues of New Vision (1986) and The Monitor (1992). Early desktop publishing computers, cameras from the “guerrilla journalism” period, and press passes from the 1996–2006 elections. The rivalry that defined modern Ugandan media.</p>
+          <div class="card-meta"><span class="tag">1986–2010</span><span class="tag">DTP Era</span></div>
+        </div>
+      </article>
 
-<div class="heading-line"></div>
+      <article class="card">
+        <div class="card-image"><img src="images/7.jpg" alt="Digital Transformation"></div>
+        <div class="card-body">
+          <h3>Digital Transformation</h3>
+          <p>Clean, minimalist space with projection mapping and augmented reality. Operational HP Indigo digital press producing museum merchandise. Interactive timeline of the E-Gazette launch (2018). Social media war room recreation. Future Lab with 3D printers and laser cutters for workshops.</p>
+          <div class="card-meta"><span class="tag">2010–Present</span><span class="tag">AR/VR</span></div>
+        </div>
+      </article>
 
-</div>
-
-
-<div class="collection-grid">
-
-
-<article class="collection-card">
-
-<div class="card-number">
-01
-</div>
-
-<h3>
-Historic Printing Machines
-</h3>
-
-<p>
-Explore the machinery and equipment that helped
-shape Uganda's printing industry.
-</p>
-
-</article>
-
-
-<article class="collection-card">
-
-<div class="card-number">
-02
-</div>
-
-<h3>
-Historic Publications
-</h3>
-
-<p>
-Discover newspapers, gazettes, books, government
-documents and other important printed materials.
-</p>
-
-</article>
-
-
-<article class="collection-card">
-
-<div class="card-number">
-03
-</div>
-
-<h3>
-Printing Technology
-</h3>
-
-<p>
-Follow the evolution from traditional printing
-methods to modern digital production.
-</p>
-
-</article>
-
-
-<article class="collection-card">
-
-<div class="card-number">
-04
-</div>
-
-<h3>
-People & Stories
-</h3>
-
-<p>
-Learn about the printers, publishers, journalists,
-designers and craftsmen who built Uganda's print culture.
-</p>
-
-</article>
-
-</div>
-
-</div>
-
+    </div>
+  </div>
 </section>
 
+<!-- ============================================================
+     ART OF PRINT
+     ============================================================ -->
+<section class="section paper-bg">
+  <div class="container">
+    <div class="center">
+      <div class="eyebrow">The Art of Print</div>
+      <h2 class="section-title">From Composition to Finished Page</h2>
+      <p class="section-intro center">Discover the technologies that transformed the printed page.</p>
+    </div>
 
-<!-- =========================================================
-     FEATURE IMAGE
-========================================================= -->
+    <div class="process">
 
-<section class="feature-image">
+      <article class="process-card">
+        <div class="era">1450s–1880s</div>
+        <h3>Hand Composition</h3>
+        <p>Printers arranged individual metal type pieces by hand into a composing stick, letter by letter. Each page required thousands of tiny lead alloy characters placed in reverse order.</p>
+      </article>
 
-<img
-src="images/2.jpg"
-alt="Uganda printing heritage"
->
+      <article class="process-card">
+        <div class="era">1884–1970s</div>
+        <h3>Linotype Machine</h3>
+        <p>Invented by Ottmar Mergenthaler, the “line o' type” machine revolutionized newspaper production by casting entire lines of type from molten lead alloy using a 90-character keyboard.</p>
+      </article>
 
-<div class="feature-overlay">
+      <article class="process-card">
+        <div class="era">1897–1980s</div>
+        <h3>Monotype System</h3>
+        <p>A two-step process: the keyboard produced perforated paper tape, which controlled the casting machine to produce individual type characters with exceptional precision for book typography.</p>
+      </article>
 
-<p class="eyebrow">
-PRESERVING MEMORY
-</p>
+      <article class="process-card">
+        <div class="era">1960s–1980s</div>
+        <h3>Phototypesetting</h3>
+        <p>CRT machines like the Linotron 505 projected characters onto photographic paper or film, eliminating metal type entirely. Fonts were stored on digital media or glass matrices.</p>
+      </article>
 
-<h2>
-Every page tells a story.
-</h2>
+      <article class="process-card">
+        <div class="era">1985–Present</div>
+        <h3>Desktop Publishing</h3>
+        <p>Apple Macintosh, Adobe PostScript, and Aldus PageMaker revolutionized pre-press. Designers could now compose pages digitally, outputting directly to imagesetters and later digital presses.</p>
+      </article>
 
-</div>
+      <article class="process-card">
+        <div class="era">1993–Present</div>
+        <h3>Digital Workflow</h3>
+        <p>Computer-to-plate (CTP) technology eliminated film entirely. PDF workflows, color management systems, and direct digital printing now dominate the pre-press landscape.</p>
+      </article>
 
+    </div>
+  </div>
 </section>
 
+<!-- ============================================================
+     COLLECTION
+     ============================================================ -->
+<section class="section" id="collection">
+  <div class="container">
+    <div class="center">
+      <div class="eyebrow">Our Treasures</div>
+      <h2 class="section-title">Museum Collection</h2>
+      <p class="section-intro center">Explore equipment, publications and archives from Uganda's print heritage.</p>
+    </div>
 
-<!-- =========================================================
-     GALLERY
-========================================================= -->
+    <div class="collection-filter">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="equipment">Equipment</button>
+      <button class="filter" data-filter="publications">Publications</button>
+      <button class="filter" data-filter="archives">Archives</button>
+    </div>
 
-<section class="gallery section" id="gallery">
+    <div class="collection-grid">
 
-<div class="container">
+      <article class="card collection-item" data-category="equipment">
+        <div class="card-image"><img src="images/8.jpg" alt="Heidelberg Platen Press"></div>
+        <div class="card-body">
+          <span class="tag">Equipment</span>
+          <h3>Heidelberg Platen Press</h3>
+          <p>German-made letterpress machine used in Uganda from the 1930s–1960s for high-quality book and document printing.</p>
+          <a href="#" class="details" data-title="Heidelberg Platen Press" data-text="German-made letterpress machine used in Uganda from the 1930s–1960s for high-quality book and document printing.">View Details →</a>
+        </div>
+      </article>
 
-<div class="section-heading">
+      <article class="card collection-item" data-category="publications">
+        <div class="card-image"><img src="images/9.jpg" alt="Uganda Gazette 1920"></div>
+        <div class="card-body">
+          <span class="tag">Publications</span>
+          <h3>Uganda Gazette, 1920</h3>
+          <p>Official government bulletin from January 31, 1920. Contains proclamations, legal notices, and colonial administration records.</p>
+          <a href="#" class="details" data-title="Uganda Gazette, 1920" data-text="Official government bulletin from January 31, 1920. Contains proclamations, legal notices, and colonial administration records.">View Details →</a>
+        </div>
+      </article>
 
-<p class="eyebrow">
-VISUAL ARCHIVE
-</p>
+      <article class="card collection-item" data-category="equipment">
+        <div class="card-image"><img src="images/10.jpg" alt="Hand-Fed Platen Press"></div>
+        <div class="card-body">
+          <span class="tag">Equipment</span>
+          <h3>Hand-Fed Platen Press</h3>
+          <p>Early 20th century foot-operated printing press used by missionary stations to produce religious texts and educational materials.</p>
+          <a href="#" class="details" data-title="Hand-Fed Platen Press" data-text="Early 20th century foot-operated printing press used by missionary stations to produce religious texts and educational materials.">View Details →</a>
+        </div>
+      </article>
 
-<h2>
-Museum Gallery
-</h2>
+      <article class="card collection-item" data-category="archives">
+        <div class="card-image"><img src="images/11.jpg" alt="Mackay's Bible"></div>
+        <div class="card-body">
+          <span class="tag">Archives</span>
+          <h3>Mackay's Bible</h3>
+          <p>The Bible presented by Captain J.H. Speke to the Omukama of Bunyoro in 1862, later influencing missionary printing efforts.</p>
+          <a href="#" class="details" data-title="Mackay's Bible" data-text="The Bible presented by Captain J.H. Speke to the Omukama of Bunyoro in 1862, later influencing missionary printing efforts.">View Details →</a>
+        </div>
+      </article>
 
-<div class="heading-line"></div>
+      <article class="card collection-item" data-category="publications">
+        <div class="card-image"><img src="images/12.jpg" alt="Gazette February 1971"></div>
+        <div class="card-body">
+          <span class="tag">Publications</span>
+          <h3>Gazette, Feb 1971</h3>
+          <p>Historic edition containing the Uganda Army's statement to the nation, marking a pivotal moment in the nation's political history.</p>
+          <a href="#" class="details" data-title="Gazette, Feb 1971" data-text="Historic edition containing the Uganda Army's statement to the nation, marking a pivotal moment in the nation's political history.">View Details →</a>
+        </div>
+      </article>
 
-<p>
-A selection from the museum's visual collection.
-</p>
+      <article class="card collection-item" data-category="equipment">
+        <div class="card-image"><img src="images/13.jpg" alt="Chandler and Price Press"></div>
+        <div class="card-body">
+          <span class="tag">Equipment</span>
+          <h3>Chandler &amp; Price Press</h3>
+          <p>American-made treadle press that served small print shops across Uganda during the mid-20th century independence era.</p>
+          <a href="#" class="details" data-title="Chandler & Price Press" data-text="American-made treadle press that served small print shops across Uganda during the mid-20th century independence era.">View Details →</a>
+        </div>
+      </article>
 
-</div>
-
-
-<div class="gallery-grid">
-
-<figure class="gallery-item">
-<img src="images/1.jpg" alt="Museum image 1">
-</figure>
-
-<figure class="gallery-item">
-<img src="images/2.jpg" alt="Museum image 2">
-</figure>
-
-<figure class="gallery-item">
-<img src="images/3.jpg" alt="Museum image 3">
-</figure>
-
-<figure class="gallery-item">
-<img src="images/4.jpg" alt="Museum image 4">
-</figure>
-
-<figure class="gallery-item">
-<img src="images/5.jpg" alt="Museum image 5">
-</figure>
-
-<figure class="gallery-item">
-<img src="images/6.jpg" alt="Museum image 6">
-</figure>
-
-<figure class="gallery-item">
-<img src="images/7.jpg" alt="Museum image 7">
-</figure>
-
-<figure class="gallery-item">
-<img src="images/8.jpg" alt="Museum image 8">
-</figure>
-
-<figure class="gallery-item">
-<img src="images/9.jpg" alt="Museum image 9">
-</figure>
-
-<figure class="gallery-item">
-<img src="images/10.jpg" alt="Museum image 10">
-</figure>
-
-<figure class="gallery-item">
-<img src="images/11.jpg" alt="Museum image 11">
-</figure>
-
-<figure class="gallery-item">
-<img src="images/12.jpg" alt="Museum image 12">
-</figure>
-
-<figure class="gallery-item">
-<img src="images/13.jpg" alt="Museum image 13">
-</figure>
-
-<figure class="gallery-item">
-<img src="images/14.jpg" alt="Museum image 14">
-</figure>
-
-<figure class="gallery-item">
-<img src="images/15.jpg" alt="Museum image 15">
-</figure>
-
-<figure class="gallery-item">
-<img src="images/16.jpg" alt="Museum image 16">
-</figure>
-
-<figure class="gallery-item">
-<img src="images/17.jpg" alt="Museum image 17">
-</figure>
-
-<figure class="gallery-item">
-<img src="images/18.jpg" alt="Museum image 18">
-</figure>
-
-</div>
-
-</div>
-
+    </div>
+  </div>
 </section>
 
+<!-- ============================================================
+     UGANDA IN GLOBAL CONTEXT
+     ============================================================ -->
+<section class="section cream">
+  <div class="container">
+    <div class="center">
+      <div class="eyebrow">World Heritage of Print</div>
+      <h2 class="section-title">Uganda in Global Context</h2>
+      <p class="section-intro center">What makes Uganda's printing heritage distinctive.</p>
+    </div>
 
-<!-- =========================================================
-     EXPERIENCE
-========================================================= -->
+    <div class="global-grid">
 
-<section class="experience section">
+      <article class="global-card">
+        <h3>What Makes Uganda Unique</h3>
 
-<div class="container experience-grid">
+        <h4>Indigenous Language Printing</h4>
+        <p>Unlike European museums focused on Latin scripts, Uganda's heritage includes early printing in Luganda, Swahili, and 50+ local languages — a rare example of African linguistic diversity in print.</p>
 
+        <h4>Press as Political Weapon</h4>
+        <p>Publications like Gambuuze used print to fight colonial rule. This political dimension distinguishes Uganda's printing history from the commercial focus of Western museums.</p>
 
-<div>
+        <h4>Missionary Origins</h4>
+        <p>Printing arrived not through commerce but through Christian missions. The CMS Industrial Mission and Catholic Verona Fathers established the first presses, creating a unique religious-literacy nexus.</p>
 
-<p class="eyebrow">
-THE EXPERIENCE
-</p>
+        <h4>Continuity of Government Printing</h4>
+        <p>The Government Printer (1900) to UPPC (1992) represents 120+ years of uninterrupted state publishing — one of Africa's oldest continuous printing institutions.</p>
+      </article>
 
-<h2>
-More than a museum.
-</h2>
+      <article class="global-card">
+        <h3>The Global Printing Museum Network</h3>
+        <p>Uganda's museum joins a distinguished international community preserving the art of the written word.</p>
 
-</div>
+        <h4>Gutenberg Museum</h4>
+        <p><strong>Mainz, Germany</strong> — Founded 1900. Houses two original 42-line Gutenberg Bibles (c. 1455). Features reconstructed Gutenberg workshops with hourly demonstrations. 140,000+ visitors annually.</p>
 
+        <h4>Plantin-Moretus Museum</h4>
+        <p><strong>Antwerp, Belgium</strong> — UNESCO World Heritage Site (2005). Preserves the world's oldest surviving wooden printing presses from c. 1600. 25,000+ incunabula &amp; old prints.</p>
 
-<div>
+        <h4>Bodoni Museum</h4>
+        <p><strong>Parma, Italy</strong> — Italy's oldest printing museum (1963). Dedicated to Giambattista Bodoni (1740–1813), whose typefaces remain the gold standard of typography.</p>
 
-<p>
+        <h4>Museum of Printing</h4>
+        <p><strong>Haverhill, USA</strong> — Founded 1978. Houses 52+ tons of equipment including the 1873 Sholes &amp; Glidden typewriter and a rare 1815 Adam Ramage press. Living history approach with active workshops.</p>
 
-The Uganda Printing & Publishing Museum is designed
-to connect generations through the history of print.
+        <h4>Drukkerijmuseum</h4>
+        <p><strong>Brussels, Belgium</strong> — Founded 1975. Focuses on 19th-century Belgian industrial printing. Maintains a specialized library of 1,000+ books accessible via the Royal Library.</p>
+      </article>
 
-</p>
+    </div>
 
-<p>
-
-Visitors can explore the tools, technologies,
-publications and stories that demonstrate how
-information has been produced, preserved and shared
-across Uganda.
-
-</p>
-
-<a href="#visit" class="text-link">
-Plan Your Visit →
-</a>
-
-</div>
-
-</div>
-
+    <div class="table-wrap">
+      <h3 style="color:var(--green-dark);font:700 1.6rem Georgia,serif;margin-bottom:15px">Comparative Museum Features</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Museum</th>
+            <th>Founded</th>
+            <th>Key Strength</th>
+            <th>Unique Contribution</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Uganda P&amp;P Museum</td><td>2026 (Heritage 1900)</td><td>African language printing &amp; political press</td><td>Only museum documenting East African missionary-to-independence printing continuum</td></tr>
+          <tr><td>Gutenberg Museum</td><td>1900</td><td>Origin of movable metal type</td><td>Two original Gutenberg Bibles; hourly press demonstrations</td></tr>
+          <tr><td>Plantin-Moretus</td><td>1877 (Museum)</td><td>Renaissance industrial printing</td><td>UNESCO site; oldest surviving wooden presses; 25,000+ early prints</td></tr>
+          <tr><td>Bodoni Museum</td><td>1963</td><td>Typography &amp; type design</td><td>Original Bodoni type specimens; Palatina Library setting</td></tr>
+          <tr><td>Museum of Printing (USA)</td><td>1978</td><td>American printing technology evolution</td><td>52 tons of equipment; active workshops; Romano master classes</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </section>
 
+<!-- ============================================================
+     EDUCATION
+     ============================================================ -->
+<section class="section" id="education">
+  <div class="container">
+    <div class="center">
+      <div class="eyebrow">Learning &amp; Engagement</div>
+      <h2 class="section-title">Education Programs</h2>
+      <p class="section-intro center">Programs designed for learners, researchers and professional printers.</p>
+    </div>
 
-<!-- =========================================================
+    <div class="education-grid">
+
+      <article class="edu-card">
+        <div class="eyebrow">Primary Level (P4–P7)</div>
+        <h3>How a Book is Made</h3>
+        <p>A 2-hour immersive museum visit where students make paper from banana fiber, set movable type, and print their own bookmark with a Luganda proverb to take home.</p>
+        <ul>
+          <li>Hands-on papermaking workshop</li>
+          <li>Letterpress printing experience</li>
+          <li>Take-home printed bookmark</li>
+          <li>Curriculum-aligned content</li>
+        </ul>
+      </article>
+
+      <article class="edu-card">
+        <div class="eyebrow">Secondary Level (S1–S4)</div>
+        <h3>Media Literacy Through History</h3>
+        <p>Full-day program analyzing propaganda techniques in Amin-era newspapers, comparing colonial and independent Uganda reporting, and writing a one-page school newspaper.</p>
+        <ul>
+          <li>Primary source analysis</li>
+          <li>Propaganda detection skills</li>
+          <li>Student newspaper workshop</li>
+          <li>Critical thinking development</li>
+        </ul>
+      </article>
+
+      <article class="edu-card">
+        <div class="eyebrow">A-Level &amp; University</div>
+        <h3>Archive Research Methods</h3>
+        <p>Week-long intensive using museum collections. Training in paleography, newspaper analysis, and oral history interviewing. Culminating research paper with publication opportunity.</p>
+        <ul>
+          <li>Paleography training</li>
+          <li>Oral history methodology</li>
+          <li>Academic publication track</li>
+          <li>University credit option</li>
+        </ul>
+      </article>
+
+      <article class="edu-card">
+        <div class="eyebrow">Professional Development</div>
+        <h3>The Printers' Revival Workshop</h3>
+        <p>6-month certificate program in letterpress printing, bookbinding, and conservation. Taught by master printers including retired UPPC technicians. Graduates enter heritage printing and fine art press careers.</p>
+        <ul>
+          <li>Master printer mentorship</li>
+          <li>Conservation techniques</li>
+          <li>Industry certification</li>
+          <li>Job placement support</li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     RESEARCH & ARCHIVES
+     ============================================================ -->
+<section class="section green-bg">
+  <div class="container">
+    <div class="center">
+      <div class="eyebrow" style="color:var(--gold)">Research &amp; Archives</div>
+      <h2 class="section-title" style="color:#fff">Knowledge for the Future</h2>
+      <p class="section-intro center" style="color:rgba(255,255,255,.75)">
+        Preservation, conservation, digitization and research are at the heart of the museum's long-term mission.
+      </p>
+    </div>
+
+    <div class="archive-grid">
+
+      <article class="archive-card">
+        <h3>Climate-Controlled Vaults</h3>
+        <p>State-of-the-art preservation environment maintaining 18°C ± 2°C and 50% ± 5% relative humidity. Inergen gas fire suppression, positive pressure HEPA filtration, and biometric security protect Uganda's most fragile print heritage.</p>
+        <div class="archive-stats">
+          <div class="archive-stat"><strong>18°C</strong><span>Temperature</span></div>
+          <div class="archive-stat"><strong>50%</strong><span>Humidity</span></div>
+          <div class="archive-stat"><strong>50K+</strong><span>Items</span></div>
+        </div>
+      </article>
+
+      <article class="archive-card">
+        <h3>Conservation Laboratory</h3>
+        <p>Equipped with paper deacidification systems, leafcasting machines for repair, ultrasonic welders for polyester encapsulation, and spectrophotometers for ink analysis. Staffed by ICCROM-trained conservators.</p>
+        <div class="archive-stats">
+          <div class="archive-stat"><strong>5</strong><span>Specialists</span></div>
+          <div class="archive-stat"><strong>200+</strong><span>Items/Year</span></div>
+          <div class="archive-stat"><strong>24/7</strong><span>Monitoring</span></div>
+        </div>
+      </article>
+
+      <article class="archive-card">
+        <h3>Digital Archive Center</h3>
+        <p>High-resolution scanning suite, audio/video digitization for all formats (reel-to-reel to U-matic), 50TB server with redundant backup, and full-text searchable online catalog. Partnership with British Library Endangered Archives Programme.</p>
+        <div class="archive-stats">
+          <div class="archive-stat"><strong>50TB</strong><span>Storage</span></div>
+          <div class="archive-stat"><strong>100K</strong><span>Pages</span></div>
+          <div class="archive-stat"><strong>500+</strong><span>Hours AV</span></div>
+        </div>
+      </article>
+
+      <article class="archive-card">
+        <h3>Research Fellowships</h3>
+        <p>Annual Printing Press Fellow for international scholars, Community Archivist grants for local historians, and visiting researcher programs. Publication opportunities in the museum's peer-reviewed journal.</p>
+        <div class="archive-stats">
+          <div class="archive-stat"><strong>12</strong><span>Fellows/Year</span></div>
+          <div class="archive-stat"><strong>25</strong><span>Grants</span></div>
+          <div class="archive-stat"><strong>4</strong><span>Publications</span></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
      VISIT
-========================================================= -->
+     ============================================================ -->
+<section class="section" id="visit">
+  <div class="container">
+    <div class="visit-box">
+      <div>
+        <div class="eyebrow" style="color:var(--gold)">Plan Your Visit</div>
+        <h2>Visit the Museum</h2>
+        <p>Come and experience Uganda's rich printing and publishing heritage from the missionary era to the digital age.</p>
+        <div style="margin-top:25px">
+          <a class="btn btn-gold" href="mailto:info@ugandaprintmuseum.org">Book a Visit</a>
+        </div>
+      </div>
 
-<section class="visit section" id="visit">
-
-<div class="container">
-
-<div class="section-heading">
-
-<p class="eyebrow">
-PLAN YOUR VISIT
-</p>
-
-<h2>
-Come and experience Uganda's print heritage.
-</h2>
-
-<div class="heading-line"></div>
-
-</div>
-
-
-<div class="visit-grid">
-
-
-<div class="visit-card">
-
-<span class="visit-icon">
-📍
-</span>
-
-<h3>
-Location
-</h3>
-
-<p>
-
-Uganda Printing and Publishing Corporation
-
-<br>
-
-Plot 8–12 Airport Road,
-Entebbe, Uganda
-
-</p>
-
-</div>
-
-
-<div class="visit-card">
-
-<span class="visit-icon">
-🕐
-</span>
-
-<h3>
-Opening Hours
-</h3>
-
-<p>
-
-Monday – Friday
-
-<br>
-
-9:00 AM – 5:00 PM
-
-</p>
-
-</div>
-
-
-<div class="visit-card">
-
-<span class="visit-icon">
-✉
-</span>
-
-<h3>
-Contact
-</h3>
-
-<p>
-
-info@uppc.go.ug
-
-<br>
-
-+256 32 652 0250
-
-</p>
-
-</div>
-
-</div>
-
-
-<div class="visit-cta">
-
-<h3>
-Planning a school, university or group visit?
-</h3>
-
-<p>
-Contact us to arrange a guided museum experience.
-</p>
-
-<a
-href="mailto:info@uppc.go.ug"
-class="btn btn-primary"
->
-Contact the Museum
-</a>
-
-</div>
-
-</div>
-
+      <div class="visit-details">
+        <div class="visit-detail"><strong>Location</strong>Plot 8-12 Airport Road, Entebbe, Uganda — Next to Ministry of Works</div>
+        <div class="visit-detail"><strong>Hours</strong>Mon–Sat: 9:00 AM – 5:00 PM · Sunday: 10:00 AM – 4:00 PM</div>
+        <div class="visit-detail"><strong>Admission</strong>Adults: 10,000 UGX · Students: 5,000 UGX · Children (Under 12): Free · Seniors (65+): Free</div>
+        <div class="visit-detail"><strong>Group Tours</strong>Available for schools and organizations. Book in advance.</div>
+        <div class="visit-detail"><strong>Contact</strong>+256 414 433700 · +256 414 433713 · info@ugandaprintmuseum.org</div>
+      </div>
+    </div>
+  </div>
 </section>
 
-
-<!-- =========================================================
-     CONTACT
-========================================================= -->
-
-<section class="contact section" id="contact">
-
-<div class="container contact-grid">
-
-
-<div>
-
-<p class="eyebrow">
-GET IN TOUCH
-</p>
-
-<h2>
-Help preserve Uganda's print heritage.
-</h2>
-
-<p>
-
-Whether you are a researcher, student, historian,
-institution, publisher or member of the public,
-we welcome your interest in Uganda's printing history.
-
-</p>
-
-</div>
-
-
-<div class="contact-details">
-
-
-<div>
-
-<span>
-Email
-</span>
-
-<a href="mailto:info@uppc.go.ug">
-info@uppc.go.ug
-</a>
-
-</div>
-
-
-<div>
-
-<span>
-Phone
-</span>
-
-<a href="tel:+256326520250">
-+256 32 652 0250
-</a>
-
-</div>
-
-
-<div>
-
-<span>
-Head Office
-</span>
-
-<p>
-Plot 8–12 Airport Road,
-Entebbe, Uganda
-</p>
-
-</div>
-
-</div>
-
-</div>
-
+<!-- ============================================================
+     DONATE
+     ============================================================ -->
+<section class="section cream" id="donate">
+  <div class="container">
+    <div class="center">
+      <div class="eyebrow">Support the Museum</div>
+      <h2 class="section-title">Help Preserve Uganda's Print Heritage</h2>
+      <p class="section-intro center">
+        Your support can help preserve artifacts, digitize archives, expand
+        education programs and keep Uganda's printing story accessible to future generations.
+      </p>
+      <a class="btn btn-green" href="mailto:info@ugandaprintmuseum.org?subject=Support%20the%20Museum">Support Us</a>
+    </div>
+  </div>
 </section>
 
+<!-- ============================================================
+     NEWSLETTER
+     ============================================================ -->
+<section class="newsletter">
+  <div class="container newsletter-inner">
+    <div>
+      <h2>Stay Updated</h2>
+      <p>Subscribe to our newsletter for exhibition announcements and museum events.</p>
+    </div>
+    <form class="newsletter-form" id="newsletterForm">
+      <input type="email" id="newsletterEmail" placeholder="Your email address" required>
+      <button class="btn btn-green" type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
 
-<!-- =========================================================
+<!-- ============================================================
      FOOTER
-========================================================= -->
+     ============================================================ -->
+<footer>
+  <div class="container footer-grid">
 
-<footer class="site-footer">
+    <div>
+      <h3>UGANDA</h3>
+      <h4>Printing &amp; Publishing Museum</h4>
+      <p>Dedicated to preserving and celebrating Uganda's rich printing and publishing heritage from the missionary era to the digital age.</p>
+    </div>
 
-<div class="container footer-grid">
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#history">History</a></li>
+        <li><a href="#collection">Collection</a></li>
+        <li><a href="#exhibitions">Exhibitions</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+    </div>
 
+    <div>
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="#">Research Library</a></li>
+        <li><a href="#">Digital Archives</a></li>
+        <li><a href="#">Publications</a></li>
+        <li><a href="#">Press Room</a></li>
+        <li><a href="#donate">Support Us</a></li>
+      </ul>
+    </div>
 
-<div class="footer-brand">
+    <div>
+      <h4>Partners</h4>
+      <ul>
+        <li>Uganda Printing &amp; Publishing Corp</li>
+        <li>Makerere University</li>
+        <li>National Library of Uganda</li>
+        <li>Uganda Publishers Association</li>
+        <li>Ministry of Education</li>
+      </ul>
+    </div>
 
-<img
-src="images/logo.png"
-alt="UPPC Logo"
->
+  </div>
 
-<p>
-Uganda Printing & Publishing Museum
-</p>
-
-<p>
-Preserving Uganda's printing and publishing
-heritage for future generations.
-</p>
-
-</div>
-
-
-<div class="footer-links">
-
-<h4>
-Explore
-</h4>
-
-<a href="#about">About</a>
-
-<a href="#history">History</a>
-
-<a href="#museum">Museum</a>
-
-<a href="#gallery">Gallery</a>
-
-<a href="#visit">Visit</a>
-
-</div>
-
-
-<div class="footer-links">
-
-<h4>
-UPPC
-</h4>
-
-<a
-href="https://www.uppc.go.ug/"
-target="_blank"
-rel="noopener noreferrer"
->
-Official UPPC Website
-</a>
-
-<a href="#contact">
-Contact
-</a>
-
-</div>
-
-</div>
-
-
-<div class="footer-bottom">
-
-<div class="container">
-
-<p>
-© <span id="year"></span>
-Uganda Printing & Publishing Museum.
-All Rights Reserved.
-</p>
-
-</div>
-
-</div>
-
+  <div class="footer-bottom">
+    <div class="container">
+      © <span id="year"></span> Uganda Printing &amp; Publishing Museum. All rights reserved.
+      &nbsp; | &nbsp; Privacy Policy &nbsp; | &nbsp; Terms of Use &nbsp; | &nbsp; Accessibility
+    </div>
+  </div>
 </footer>
 
-
-<!-- =========================================================
-     LIGHTBOX
-========================================================= -->
-
-<div
-class="lightbox"
-id="lightbox"
-aria-hidden="true"
->
-
-<button
-class="lightbox-close"
-id="lightboxClose"
-aria-label="Close image"
->
-×
-</button>
-
-<img
-id="lightboxImage"
-src=""
-alt=""
->
-
+<!-- COLLECTION DETAIL MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose">×</button>
+    <h2 id="modalTitle"></h2>
+    <p id="modalText"></p>
+  </div>
 </div>
 
-
-<!-- =========================================================
-     JAVASCRIPT
-========================================================= -->
-
 <script>
+/* ============================================================
+   JAVASCRIPT
+   No external JavaScript file is needed.
+   ============================================================ */
 
-/* =========================================================
-   MOBILE MENU
-========================================================= */
+// Mobile navigation
+const menu = document.getElementById("menu");
+const navLinks = document.getElementById("navLinks");
 
-const mobileMenuBtn =
-document.getElementById("mobileMenuBtn");
-
-const mainNav =
-document.getElementById("mainNav");
-
-
-if (mobileMenuBtn && mainNav) {
-
-    mobileMenuBtn.addEventListener("click", function () {
-
-        mainNav.classList.toggle("active");
-
-        const isOpen =
-            mainNav.classList.contains("active");
-
-        mobileMenuBtn.setAttribute(
-            "aria-expanded",
-            isOpen
-        );
-
-    });
-
-
-    mainNav
-        .querySelectorAll("a")
-        .forEach(function (link) {
-
-            link.addEventListener("click", function () {
-
-                mainNav.classList.remove("active");
-
-                mobileMenuBtn.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-            });
-
-        });
-
-}
-
-
-/* =========================================================
-   GALLERY LIGHTBOX
-========================================================= */
-
-const galleryImages =
-document.querySelectorAll(".gallery-item img");
-
-const lightbox =
-document.getElementById("lightbox");
-
-const lightboxImage =
-document.getElementById("lightboxImage");
-
-const lightboxClose =
-document.getElementById("lightboxClose");
-
-
-galleryImages.forEach(function (image) {
-
-    image.addEventListener("click", function () {
-
-        lightboxImage.src = image.src;
-
-        lightboxImage.alt = image.alt;
-
-        lightbox.classList.add("active");
-
-        lightbox.setAttribute(
-            "aria-hidden",
-            "false"
-        );
-
-        document.body.style.overflow = "hidden";
-
-    });
-
+menu.addEventListener("click", () => {
+  navLinks.classList.toggle("open");
+  menu.textContent = navLinks.classList.contains("open") ? "×" : "☰";
 });
 
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+    menu.textContent = "☰";
+  });
+});
 
-function closeLightbox() {
+// Active navigation link
+const pageSections = document.querySelectorAll("section[id]");
+window.addEventListener("scroll", () => {
+  let current = "";
+  pageSections.forEach(section => {
+    if (window.scrollY >= section.offsetTop - 130) current = section.id;
+  });
 
-    lightbox.classList.remove("active");
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    link.classList.toggle("active", link.getAttribute("href") === "#" + current);
+  });
+});
 
-    lightbox.setAttribute(
-        "aria-hidden",
-        "true"
-    );
+// Collection filtering
+const filterButtons = document.querySelectorAll(".filter");
+const collectionItems = document.querySelectorAll(".collection-item");
 
-    lightboxImage.src = "";
+filterButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    filterButtons.forEach(b => b.classList.remove("active"));
+    button.classList.add("active");
 
-    document.body.style.overflow = "";
+    const filter = button.dataset.filter;
 
+    collectionItems.forEach(item => {
+      item.classList.toggle(
+        "hidden",
+        filter !== "all" && item.dataset.category !== filter
+      );
+    });
+  });
+});
+
+// Collection details modal
+const modal = document.getElementById("modal");
+const modalTitle = document.getElementById("modalTitle");
+const modalText = document.getElementById("modalText");
+const modalClose = document.getElementById("modalClose");
+
+document.querySelectorAll(".details").forEach(button => {
+  button.addEventListener("click", event => {
+    event.preventDefault();
+    modalTitle.textContent = button.dataset.title;
+    modalText.textContent = button.dataset.text;
+    modal.classList.add("open");
+  });
+});
+
+function closeModal(){
+  modal.classList.remove("open");
 }
+modalClose.addEventListener("click", closeModal);
+modal.addEventListener("click", e => {
+  if(e.target === modal) closeModal();
+});
+document.addEventListener("keydown", e => {
+  if(e.key === "Escape") closeModal();
+});
 
+// Newsletter demo
+document.getElementById("newsletterForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const email = document.getElementById("newsletterEmail").value;
+  alert("Thank you! " + email + " has been added to the newsletter form.");
+  e.target.reset();
+});
 
-lightboxClose.addEventListener(
-    "click",
-    closeLightbox
-);
-
-
-lightbox.addEventListener(
-    "click",
-    function (event) {
-
-        if (event.target === lightbox) {
-
-            closeLightbox();
-
-        }
-
-    }
-);
-
-
-document.addEventListener(
-    "keydown",
-    function (event) {
-
-        if (event.key === "Escape") {
-
-            closeLightbox();
-
-        }
-
-    }
-);
-
-
-/* =========================================================
-   AUTOMATIC COPYRIGHT YEAR
-========================================================= */
-
-const yearElement =
-document.getElementById("year");
-
-if (yearElement) {
-
-    yearElement.textContent =
-        new Date().getFullYear();
-
-}
-
+// Footer year
+document.getElementById("year").textContent = new Date().getFullYear();
 </script>
-
 
 </body>
 </html>
